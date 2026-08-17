@@ -1860,82 +1860,81 @@ Choose problems representing each pattern.
 
 ## 1D Linear
 
-* Climbing Stairs
-* House Robber
-* House Robber II (circular — twist)
-* Maximum Subarray
-* Decode Ways
+- [ ] Climbing Stairs
+- [ ] House Robber
+- [ ] House Robber II (circular — twist)
+- [ ] Maximum Subarray
+- [ ] Decode Ways
 
 ## 0/1 Knapsack family
 
-* Partition Equal Subset Sum
-* Target Sum
-* Ones and Zeroes
-* Last Stone Weight II
+- [ ] Partition Equal Subset Sum
+- [ ] Target Sum
+- [ ] Ones and Zeroes
+- [ ] Last Stone Weight II
 
 ## Unbounded
 
-* Coin Change
-* Coin Change 2
-* Integer Break
-* Perfect Squares
+- [ ] Coin Change
+- [ ] Coin Change 2
+- [ ] Integer Break
+- [ ] Perfect Squares
 
 ## Two Sequence
 
-* Longest Common Subsequence
-* Edit Distance
-* Delete Operation for Two Strings
-* Shortest Common Supersequence
-* Interleaving String
+- [ ] Longest Common Subsequence
+- [ ] Edit Distance
+- [ ] Delete Operation for Two Strings
+- [ ] Shortest Common Supersequence
+- [ ] Interleaving String
 
 ## LIS family
 
-* Longest Increasing Subsequence
-* Russian Doll Envelopes
-* Number of Longest Increasing Subsequence
+- [ ] Longest Increasing Subsequence
+- [ ] Russian Doll Envelopes
+- [ ] Number of Longest Increasing Subsequence
 
 ## Grid
 
-* Unique Paths
-* Unique Paths II
-* Minimum Path Sum
-* Dungeon Game
-* Maximal Square
-* Cherry Pickup (advanced)
+- [ ] Unique Paths
+- [ ] Unique Paths II
+- [ ] Minimum Path Sum
+- [ ] Dungeon Game
+- [ ] Maximal Square
+- [ ] Cherry Pickup (advanced)
 
 ## Interval
 
-* Burst Balloons
-* Matrix Chain Multiplication
-* Palindrome Partitioning II
-* Stone Game
+- [ ] Burst Balloons
+- [ ] Matrix Chain Multiplication
+- [ ] Palindrome Partitioning II
+- [ ] Stone Game
 
 ## State Machine
 
-* Best Time to Buy and Sell Stock
-* Best Time with Cooldown
-* Best Time with Transaction Fee
-* Paint House
+- [ ] Best Time to Buy and Sell Stock
+- [ ] Best Time with Cooldown
+- [ ] Best Time with Transaction Fee
+- [ ] Paint House
 
 ## Tree DP
 
-* House Robber III
-* Binary Tree Maximum Path Sum
+- [ ] House Robber III
+- [ ] Binary Tree Maximum Path Sum
 
 ## Bitmask
 
-* Shortest Path Visiting All Nodes
-* Partition to K Equal Sum Subsets
+- [ ] Shortest Path Visiting All Nodes
+- [ ] Partition to K Equal Sum Subsets
 
 ## Counting / Math DP
 
-* Unique Binary Search Trees
-* Domino and Tromino Tiling
+- [ ] Unique Binary Search Trees
+- [ ] Domino and Tromino Tiling
 
 That's a strong first deep pass.
 
 ---
-
 # 42. For EVERY Dynamic Programming Problem
 
 Use this thinking process:

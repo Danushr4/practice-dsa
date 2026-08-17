@@ -1328,22 +1328,21 @@ That last distinction is important for keeping your learning organized.
 
 For this Arrays pass, I'd choose:
 
-- Matrix row/column traversal from scratch
-- Diagonal Sum
-- Spiral Matrix
-- Spiral Matrix II conceptually
-- Transpose Matrix
-- Rotate Image
-- Set Matrix Zeroes
-- Search a 2D Matrix / sorted matrix search
-- Reshape Matrix conceptually
+- [ ] Matrix row/column traversal from scratch
+- [ ] Diagonal Sum
+- [ ] Spiral Matrix
+- [ ] Spiral Matrix II conceptually
+- [ ] Transpose Matrix
+- [ ] Rotate Image
+- [ ] Set Matrix Zeroes
+- [ ] Search a 2D Matrix / sorted matrix search
+- [ ] Reshape Matrix conceptually
 
 For neighbor traversal, write a small exercise that visits valid neighbors of each cell.
 
 No need for Number of Islands yet—that belongs with Graphs.
 
 ---
-
 
 
 # 37. Set Matrix Zeroes — useful in-place reasoning

@@ -1847,101 +1847,101 @@ You don't need 100 random problems. Choose representatives per pattern.
 
 ### Fundamentals
 
-- Implement Dynamic Array (Vector)
-- Reverse String / Array
-- Find Max / Second Max
-- Merge Two Sorted Arrays
+- [ ] Implement Dynamic Array (Vector)
+- [ ] Reverse String / Array
+- [ ] Find Max / Second Max
+- [ ] Merge Two Sorted Arrays
 
 ### Linear Scan
 
-- Best Time to Buy and Sell Stock
-- Maximum Subarray (Kadane)
-- Contains Duplicate (multiple approaches)
+- [ ] Best Time to Buy and Sell Stock
+- [ ] Maximum Subarray (Kadane)
+- [ ] Contains Duplicate (multiple approaches)
 
 ### Two Pointers
 
-- Two Sum II
-- 3Sum
-- Valid Palindrome
-- Remove Duplicates from Sorted Array
-- Move Zeroes
-- Container With Most Water
+- [ ] Two Sum II
+- [ ] 3Sum
+- [ ] Valid Palindrome
+- [ ] Remove Duplicates from Sorted Array
+- [ ] Move Zeroes
+- [ ] Container With Most Water
 
 **More:** `array/twoptr.md`
 
 ### Sliding Window
 
-- Maximum Average Subarray I
-- Longest Substring Without Repeating Characters
-- Minimum Size Subarray Sum
-- Permutation in String
-- Longest Repeating Character Replacement
+- [ ] Maximum Average Subarray I
+- [ ] Longest Substring Without Repeating Characters
+- [ ] Minimum Size Subarray Sum
+- [ ] Permutation in String
+- [ ] Longest Repeating Character Replacement
 
 **More:** `array/slidingwindow.md`
 
 ### Prefix Sum / Difference
 
-- Range Sum Query Immutable
-- Subarray Sum Equals K
-- Product of Array Except Self
-- Corporate Flight Bookings (difference array)
+- [ ] Range Sum Query Immutable
+- [ ] Subarray Sum Equals K
+- [ ] Product of Array Except Self
+- [ ] Corporate Flight Bookings (difference array)
 
 **More:** `array/prefixsum-hashmap.md`
 
 ### Hash Map + Array
 
-- Two Sum
-- Group Anagrams
-- Valid Anagram
-- Find All Anagrams in a String
+- [ ] Two Sum
+- [ ] Group Anagrams
+- [ ] Valid Anagram
+- [ ] Find All Anagrams in a String
 
 ### Sort + Scan
 
-- Merge Intervals
-- Non-overlapping Intervals
-- Insert Interval
-- Meeting Rooms
+- [ ] Merge Intervals
+- [ ] Non-overlapping Intervals
+- [ ] Insert Interval
+- [ ] Meeting Rooms
 
 **More:** `array/sortscan.md`
 
 ### Binary Search
 
-- Binary Search
-- Search Insert Position
-- Find First and Last Position
-- Search in Rotated Sorted Array
-- Koko Eating Bananas
+- [ ] Binary Search
+- [ ] Search Insert Position
+- [ ] Find First and Last Position
+- [ ] Search in Rotated Sorted Array
+- [ ] Koko Eating Bananas
 
 **More:** `array/binarysearch-inplace.md`
 
 ### In-Place / Partition
 
-- Sort Colors (Dutch National Flag)
-- Rotate Array
-- Remove Element
-- Wiggle Sort
+- [ ] Sort Colors (Dutch National Flag)
+- [ ] Rotate Array
+- [ ] Remove Element
+- [ ] Wiggle Sort
 
 ### Matrix
 
-- Spiral Matrix
-- Rotate Image
-- Set Matrix Zeroes
-- Search a 2D Matrix
+- [ ] Spiral Matrix
+- [ ] Rotate Image
+- [ ] Set Matrix Zeroes
+- [ ] Search a 2D Matrix
 
 **More:** `array/matrix_2dTra.md`
 
 ### String
 
-- Longest Palindrome Substring
-- Valid Anagram
-- Implement strStr() (basic / KMP later)
+- [ ] Longest Palindrome Substring
+- [ ] Valid Anagram
+- [ ] Implement strStr() (basic / KMP later)
 
 ### Composition (Harder)
 
-- Trapping Rain Water
-- Substring with Concatenation of All Words
-- First Missing Positive (cycle placement)
-- Maximum Product Subarray
+- [ ] Trapping Rain Water
+- [ ] Substring with Concatenation of All Words
+- [ ] First Missing Positive (cycle placement)
+- [ ] Maximum Product Subarray
 
 That set covers the major array & string patterns deeply.
 

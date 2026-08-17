@@ -2438,81 +2438,80 @@ You don't need 100 random tree problems. Choose representatives.
 
 ## Fundamentals
 
-* Maximum Depth of Binary Tree
-* Same Tree
-* Invert Binary Tree
-* Count Complete Tree Nodes
-* Symmetric Tree
+- [ ] Maximum Depth of Binary Tree
+- [ ] Same Tree
+- [ ] Invert Binary Tree
+- [ ] Count Complete Tree Nodes
+- [ ] Symmetric Tree
 
 ## DFS — Divide and Conquer
 
-* Diameter of Binary Tree
-* Balanced Binary Tree
-* Subtree of Another Tree
-* Count Good Nodes in Binary Tree
+- [ ] Diameter of Binary Tree
+- [ ] Balanced Binary Tree
+- [ ] Subtree of Another Tree
+- [ ] Count Good Nodes in Binary Tree
 
 ## BFS / Level-Order
 
-* Binary Tree Level Order Traversal
-* Binary Tree Right Side View
-* Average of Levels in Binary Tree
-* Minimum Depth of Binary Tree
-* Populating Next Right Pointers in Each Node
+- [ ] Binary Tree Level Order Traversal
+- [ ] Binary Tree Right Side View
+- [ ] Average of Levels in Binary Tree
+- [ ] Minimum Depth of Binary Tree
+- [ ] Populating Next Right Pointers in Each Node
 
 ## BST
 
-* Search in a BST
-* Insert into a BST
-* Delete Node in a BST
-* Validate Binary Search Tree
-* Kth Smallest Element in a BST
-* Lowest Common Ancestor of a BST
+- [ ] Search in a BST
+- [ ] Insert into a BST
+- [ ] Delete Node in a BST
+- [ ] Validate Binary Search Tree
+- [ ] Kth Smallest Element in a BST
+- [ ] Lowest Common Ancestor of a BST
 
 ## Path Problems
 
-* Path Sum
-* Path Sum II
-* Path Sum III
-* Binary Tree Maximum Path Sum
-* Sum Root to Leaf Numbers
+- [ ] Path Sum
+- [ ] Path Sum II
+- [ ] Path Sum III
+- [ ] Binary Tree Maximum Path Sum
+- [ ] Sum Root to Leaf Numbers
 
 ## LCA
 
-* Lowest Common Ancestor of a Binary Tree
+- [ ] Lowest Common Ancestor of a Binary Tree
 
 ## Build Tree
 
-* Construct Binary Tree from Preorder and Inorder
-* Construct Binary Tree from Inorder and Postorder
+- [ ] Construct Binary Tree from Preorder and Inorder
+- [ ] Construct Binary Tree from Inorder and Postorder
 
 ## Heap
 
-* Kth Largest Element in an Array
-* Top K Frequent Elements
-* Merge K Sorted Lists
-* Find Median from Data Stream
+- [ ] Kth Largest Element in an Array
+- [ ] Top K Frequent Elements
+- [ ] Merge K Sorted Lists
+- [ ] Find Median from Data Stream
 
 ## Trie
 
-* Implement Trie
-* Design Add and Search Words Data Structure
-* Word Search II
+- [ ] Implement Trie
+- [ ] Design Add and Search Words Data Structure
+- [ ] Word Search II
 
 ## Serialization
 
-* Serialize and Deserialize Binary Tree
+- [ ] Serialize and Deserialize Binary Tree
 
 ## Advanced Composition
 
-* Binary Tree Maximum Path Sum
-* Count Univalue Subtrees
-* House Robber III
-* Binary Tree Cameras
+- [ ] Binary Tree Maximum Path Sum
+- [ ] Count Univalue Subtrees
+- [ ] House Robber III
+- [ ] Binary Tree Cameras
 
 That is enough to understand the major tree patterns deeply.
 
 ---
-
 # 33. For EVERY Tree Problem
 
 Use the same learning process we established for Arrays and Linked Lists.

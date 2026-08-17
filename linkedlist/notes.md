@@ -1150,65 +1150,64 @@ Choose problems representing each concept.
 
 ### Fundamentals
 
-- Implement Singly Linked List
-- Implement Doubly Linked List
-- Insert/Delete/Search
-- Find length
+- [ ] Implement Singly Linked List
+- [ ] Implement Doubly Linked List
+- [ ] Insert/Delete/Search
+- [ ] Find length
 
 
 
 ### Reversal
 
-- Reverse Linked List
-- Reverse Linked List II
-- Reverse Nodes in K Group — later/harder
+- [ ] Reverse Linked List
+- [ ] Reverse Linked List II
+- [ ] Reverse Nodes in K Group — later/harder
 
 
 
 ### Fast/Slow
 
-- Middle of Linked List
-- Linked List Cycle
-- Linked List Cycle II
-- Happy Number as a conceptual application of Floyd
+- [ ] Middle of Linked List
+- [ ] Linked List Cycle
+- [ ] Linked List Cycle II
+- [ ] Happy Number as a conceptual application of Floyd
 
 
 
 ### Two-pointer gap
 
-- Remove Nth Node From End
+- [ ] Remove Nth Node From End
 
 
 
 ### Dummy node
 
-- Remove Linked List Elements
-- Remove Nth Node From End
-- Merge Two Sorted Lists
+- [ ] Remove Linked List Elements
+- [ ] Remove Nth Node From End
+- [ ] Merge Two Sorted Lists
 
 
 
 ### Composition
 
-- Palindrome Linked List
-- Reorder List
+- [ ] Palindrome Linked List
+- [ ] Reorder List
 
 
 
 ### Structural relationships
 
-- Intersection of Two Linked Lists
+- [ ] Intersection of Two Linked Lists
 
 
 
 ### Sorting
 
-- Sort List
+- [ ] Sort List
 
 That is enough to understand the major Linked List patterns deeply.
 
 ---
-
 
 
 # 15. For EVERY Linked List Problem

@@ -1961,92 +1961,91 @@ Organized by technique. Do a few from each bucket deeply — implement, trace, e
 
 ## Brute Force / Baseline
 
-* Implement strstr behavior from scratch
-* Count occurrences with overlap
-* Find first differing character of two strings
+- [ ] Implement strstr behavior from scratch
+- [ ] Count occurrences with overlap
+- [ ] Find first differing character of two strings
 
 ---
 
 ## Rabin-Karp / Rolling Hash
 
-* Repeated DNA Sequences (length-10 windows)
-* Subarrays with equal hash (array variant)
-* Find substring anagrams (hash + sliding window hybrid)
+- [ ] Repeated DNA Sequences (length-10 windows)
+- [ ] Subarrays with equal hash (array variant)
+- [ ] Find substring anagrams (hash + sliding window hybrid)
 
 ---
 
 ## KMP / LPS
 
-* Implement strStr / find index of first match
-* Find all occurrences with overlap
-* Shortest Palindrome (KMP on reversed string)
-* Repeated Substring Pattern (period via lps)
+- [ ] Implement strStr / find index of first match
+- [ ] Find all occurrences with overlap
+- [ ] Shortest Palindrome (KMP on reversed string)
+- [ ] Repeated Substring Pattern (period via lps)
 
 ---
 
 ## Z-Algorithm
 
-* Find all occurrences via Z on combined string
-* Longest prefix which is suffix at each position
-* Count distinct echo substrings (with hash/Z hybrid)
+- [ ] Find all occurrences via Z on combined string
+- [ ] Longest prefix which is suffix at each position
+- [ ] Count distinct echo substrings (with hash/Z hybrid)
 
 ---
 
 ## Trie (see also trees/notes.md)
 
-* Implement Trie (Insert/Search/StartsWith)
-* Replace Words
-* Longest Word in Dictionary
-* Word Search II
-* Design Add and Search Words (wildcard DFS)
+- [ ] Implement Trie (Insert/Search/StartsWith)
+- [ ] Replace Words
+- [ ] Longest Word in Dictionary
+- [ ] Word Search II
+- [ ] Design Add and Search Words (wildcard DFS)
 
 ---
 
 ## Suffix Array / Advanced Index
 
-* Count distinct substrings (conceptual with SA + LCP)
-* Longest repeated substring (SA + LCP max)
-* Binary search pattern in text using SA
+- [ ] Count distinct substrings (conceptual with SA + LCP)
+- [ ] Longest repeated substring (SA + LCP max)
+- [ ] Binary search pattern in text using SA
 
 ---
 
 ## Manacher / Palindromes
 
-* Longest Palindromic Substring
-* Palindromic Substrings (count)
-* Manacher vs expand — compare runtimes on same input
+- [ ] Longest Palindromic Substring
+- [ ] Palindromic Substrings (count)
+- [ ] Manacher vs expand — compare runtimes on same input
 
 ---
 
 ## Aho-Corasick
 
-* Multi-pattern search (implement minimal version)
-* Word break II with huge dictionary (Aho-Corasick + DP)
-* Search keywords in document stream
+- [ ] Multi-pattern search (implement minimal version)
+- [ ] Word break II with huge dictionary (Aho-Corasick + DP)
+- [ ] Search keywords in document stream
 
 ---
 
 ## Pattern Composition / Mixed
 
-* Shortest Palindrome
-* Different ways to add parentheses — less string, but parsing adjacency
-* Minimum window containing all characters of multiple strings
-* Substring with concatenation of all words (hash + sliding window)
+- [ ] Shortest Palindrome
+- [ ] Different ways to add parentheses — less string, but parsing adjacency
+- [ ] Minimum window containing all characters of multiple strings
+- [ ] Substring with concatenation of all words (hash + sliding window)
 
 ---
 
 ## Interview Classics (String Family)
 
-* Valid Anagram / Group Anagrams (hashing)
-* Longest Substring Without Repeating Characters (sliding window)
-* Minimum Window Substring
-* Decode Ways
-* Edit Distance (DP — bridge to DP phase)
+- [ ] Valid Anagram / Group Anagrams (hashing)
+- [ ] Longest Substring Without Repeating Characters (sliding window)
+- [ ] Minimum Window Substring
+- [ ] Decode Ways
+- [ ] Edit Distance (DP — bridge to DP phase)
 
 That is enough for a first deep pass through Phase 13.
 
 ---
-
 # 18. For EVERY String Algorithm Problem
 
 Use this thinking process — same discipline as Arrays and Linked Lists.

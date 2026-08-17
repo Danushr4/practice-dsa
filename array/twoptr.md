@@ -1190,21 +1190,13 @@ You don't need 50.
 
 ### Opposite direction
 
-**1. Reverse String**
+- [ ] **1. Reverse String** — Learn basic L/R movement.
 
-Learn basic L/R movement.
+- [ ] **2. Valid Palindrome** — Learn symmetric comparison.
 
-**2. Valid Palindrome**
+- [ ] **3. Two Sum II — Input Array Is Sorted** — Learn search-space elimination.
 
-Learn symmetric comparison.
-
-**3. Two Sum II — Input Array Is Sorted**
-
-Learn search-space elimination.
-
-**4. Container With Most Water**
-
-Learn more subtle pointer-movement reasoning.
+- [ ] **4. Container With Most Water** — Learn more subtle pointer-movement reasoning.
 
 ---
 
@@ -1212,17 +1204,11 @@ Learn more subtle pointer-movement reasoning.
 
 ### Same direction / Read-Write
 
-**5. Remove Duplicates from Sorted Array**
+- [ ] **5. Remove Duplicates from Sorted Array** — Learn compaction.
 
-Learn compaction.
+- [ ] **6. Remove Element** — Learn filtering.
 
-**6. Remove Element**
-
-Learn filtering.
-
-**7. Move Zeroes**
-
-Learn stable in-place movement.
+- [ ] **7. Move Zeroes** — Learn stable in-place movement.
 
 ---
 
@@ -1230,11 +1216,9 @@ Learn stable in-place movement.
 
 ### Two sequences
 
-**8. Merge Sorted Array**
+- [ ] **8. Merge Sorted Array** — Learn `i/j` traversal.
 
-Learn `i/j` traversal.
-
-**9. Intersection of Two Sorted Arrays** conceptually.
+- [ ] **9. Intersection of Two Sorted Arrays** — conceptually.
 
 ---
 
@@ -1242,7 +1226,7 @@ Learn `i/j` traversal.
 
 ### After you're comfortable
 
-**10. 3Sum**
+- [ ] **10. 3Sum**
 
 Very important composition:
 

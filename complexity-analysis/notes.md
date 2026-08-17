@@ -893,52 +893,51 @@ Choose problems representing each reasoning mode.
 
 ### Fundamentals — counting loops
 
-- Analyze simple for/while loops
-- Compare `i++` vs `i *= 2` loop bounds
-- Triangle nested loop complexity
-- Sequential phases with different costs
+- [ ] Analyze simple for/while loops
+- [ ] Compare `i++` vs `i *= 2` loop bounds
+- [ ] Triangle nested loop complexity
+- [ ] Sequential phases with different costs
 
 ### Logarithmic reasoning
 
-- Binary search variants
-- Find peak element by halving
-- Integer square root by binary search
-- Exponentiation by squaring
+- [ ] Binary search variants
+- [ ] Find peak element by halving
+- [ ] Integer square root by binary search
+- [ ] Exponentiation by squaring
 
 ### Divide and conquer
 
-- Merge sort / quicksort analysis
-- Count inversions
-- Draw tree for `T(n) = 3T(n/2) + n`
+- [ ] Merge sort / quicksort analysis
+- [ ] Count inversions
+- [ ] Draw tree for `T(n) = 3T(n/2) + n`
 
 ### Recurrences
 
-- Fibonacci naive vs memoized
-- Tower of Hanoi
-- Recursive binary search
+- [ ] Fibonacci naive vs memoized
+- [ ] Tower of Hanoi
+- [ ] Recursive binary search
 
 ### Amortized analysis
 
-- Dynamic array push_back sequence
-- Hash table insert with resizing
+- [ ] Dynamic array push_back sequence
+- [ ] Hash table insert with resizing
 
 ### Space complexity
 
-- DFS stack on skewed vs balanced tree
-- In-place vs extra-array reversal
-- BFS queue max size
-- Memoized DP table size
+- [ ] DFS stack on skewed vs balanced tree
+- [ ] In-place vs extra-array reversal
+- [ ] BFS queue max size
+- [ ] Memoized DP table size
 
 ### Integrated (analyze, don't just solve)
 
-- Two Sum — brute vs hash map
-- Contains Duplicate — three approaches
-- Search rotated sorted array — O(log n)
-- Kth largest — heap vs quickselect
-- Number of islands — O(mn) BFS/DFS
+- [ ] Two Sum — brute vs hash map
+- [ ] Contains Duplicate — three approaches
+- [ ] Search rotated sorted array — O(log n)
+- [ ] Kth largest — heap vs quickselect
+- [ ] Number of islands — O(mn) BFS/DFS
 
 ---
-
 # 16. For EVERY Complexity Analysis
 
 **1. What is the input size variable?**

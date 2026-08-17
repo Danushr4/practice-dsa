@@ -1356,50 +1356,49 @@ You don't need dozens.
 
 For this pattern, I'd use:
 
-**1. Contains Duplicate — sorting solution**
+- [ ] **1. Contains Duplicate — sorting solution**
 
 Compare with hashing.
 
-**2. Merge Sorted Array**
+- [ ] **2. Merge Sorted Array**
 
 Basic ordered traversal.
 
-**3. Merge Intervals**
+- [ ] **3. Merge Intervals**
 
 Core Sort + Scan problem.
 
-**4. Meeting Rooms**
+- [ ] **4. Meeting Rooms**
 
 Overlap detection.
 
-**5. Minimum Difference Between Highest and Lowest of K Scores**
+- [ ] **5. Minimum Difference Between Highest and Lowest of K Scores**
 
 Sorting exposes nearby candidates.
 
-**6. Two Sum II**
+- [ ] **6. Two Sum II**
 
 Sorted Two Pointers.
 
-**7. 3Sum**
+- [ ] **7. 3Sum**
 
 Sort + fixed element + Two Pointers.
 
-**8. Group/Remove duplicates from sorted input**
+- [ ] **8. Group/Remove duplicates from sorted input**
 
 Adjacent grouping.
 
 Later:
 
-**9. Non-overlapping Intervals**
+- [ ] **9. Non-overlapping Intervals**
 
 Sort + Greedy.
 
-**10. Meeting Rooms II / overlapping events**
+- [ ] **10. Meeting Rooms II / overlapping events**
 
 Sort + sweep concept.
 
 ---
-
 
 
 # 31. For EVERY Sorting + Scan problem

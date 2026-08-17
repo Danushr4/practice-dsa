@@ -1455,16 +1455,16 @@ Prefix Sum + Hash Map
 
 For this Arrays/Strings pass, these are enough:
 
-- Contains Duplicate
-- Valid Anagram
-- Two Sum
-- Intersection of Two Arrays
-- Group Anagrams
-- First Unique Character
-- Longest Substring Without Repeating Characters
-- Subarray Sum Equals K
-- Isomorphic Strings
-- Count pairs with target sum
+- [ ] Contains Duplicate
+- [ ] Valid Anagram
+- [ ] Two Sum
+- [ ] Intersection of Two Arrays
+- [ ] Group Anagrams
+- [ ] First Unique Character
+- [ ] Longest Substring Without Repeating Characters
+- [ ] Subarray Sum Equals K
+- [ ] Isomorphic Strings
+- [ ] Count pairs with target sum
 
 The purpose isn't to collect solved problems.
 
@@ -1480,7 +1480,6 @@ complement
 ```
 
 ---
-
 
 
 # Combined mental model

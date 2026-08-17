@@ -2199,81 +2199,80 @@ Choose problems representing each concept.
 
 ### Fundamentals
 
-- Build adjacency list from edge list
-- BFS traversal order
-- DFS traversal order
-- Count vertices and edges
+- [ ] Build adjacency list from edge list
+- [ ] BFS traversal order
+- [ ] DFS traversal order
+- [ ] Count vertices and edges
 
 ### BFS
 
-- Shortest path in unweighted graph
-- Word Ladder
-- Rotting Oranges (multi-source BFS)
-- 01 Matrix
-- Maze shortest path
+- [ ] Shortest path in unweighted graph
+- [ ] Word Ladder
+- [ ] Rotting Oranges (multi-source BFS)
+- [ ] 01 Matrix
+- [ ] Maze shortest path
 
 ### DFS
 
-- Number of Islands
-- Flood Fill
-- Clone Graph
-- Path exists
+- [ ] Number of Islands
+- [ ] Flood Fill
+- [ ] Clone Graph
+- [ ] Path exists
 
 ### Cycle Detection
 
-- Course Schedule (can finish?)
-- Redundant Connection
+- [ ] Course Schedule (can finish?)
+- [ ] Redundant Connection
 
 ### Topological Sort
 
-- Course Schedule II
-- Alien Dictionary (harder)
+- [ ] Course Schedule II
+- [ ] Alien Dictionary (harder)
 
 ### Union-Find
 
-- Number of Connected Components (dynamic)
-- Accounts Merge
-- Redundant Connection
-- Friend Circles
+- [ ] Number of Connected Components (dynamic)
+- [ ] Accounts Merge
+- [ ] Redundant Connection
+- [ ] Friend Circles
 
 ### MST
 
-- Min Cost to Connect All Points
-- Connecting Cities With Minimum Cost
+- [ ] Min Cost to Connect All Points
+- [ ] Connecting Cities With Minimum Cost
 
 ### Dijkstra
 
-- Network Delay Time
-- Path With Minimum Effort
-- Cheapest Flights Within K Stops (variant)
+- [ ] Network Delay Time
+- [ ] Path With Minimum Effort
+- [ ] Cheapest Flights Within K Stops (variant)
 
 ### Bellman-Ford
 
-- Shortest path with negative edges (classic textbook)
-- Distance limited paths counting (variant)
+- [ ] Shortest path with negative edges (classic textbook)
+- [ ] Distance limited paths counting (variant)
 
 ### Floyd-Warshall
 
-- Find the City With the Smallest Number of Neighbors at a Threshold Distance
+- [ ] Find the City With the Smallest Number of Neighbors at a Threshold Distance
 
 ### Bipartite / Coloring
 
-- Is Graph Bipartite?
+- [ ] Is Graph Bipartite?
 
 ### Backtracking
 
-- All Paths From Source to Target
+- [ ] All Paths From Source to Target
 
 ### Composition
 
-- Course Schedule II (cycle + topo)
-- Word Ladder (implicit graph BFS)
-- Critical Connections (bridges — when ready for advanced)
+- [ ] Course Schedule II (cycle + topo)
+- [ ] Word Ladder (implicit graph BFS)
+- [ ] Critical Connections (bridges — when ready for advanced)
 
 That is enough to understand the major graph patterns deeply.
 
 ---
-
 # 22. For EVERY Graph Problem
 
 Use the same learning process established for Arrays, Linked Lists, and Hash Tables.

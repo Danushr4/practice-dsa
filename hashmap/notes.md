@@ -1358,46 +1358,45 @@ You do **not** need 100 hashing questions.
 
 ## Fundamentals
 
-* Implement Hash Set
-* Implement Hash Map
+- [ ] Implement Hash Set
+- [ ] Implement Hash Map
 
 ## Membership
 
-* Contains Duplicate
-* Intersection of Two Arrays
+- [ ] Contains Duplicate
+- [ ] Intersection of Two Arrays
 
 ## Frequency
 
-* Valid Anagram
-* First Unique Character
-* Top K Frequent Elements later with heap
+- [ ] Valid Anagram
+- [ ] First Unique Character
+- [ ] Top K Frequent Elements later with heap
 
 ## Complement
 
-* Two Sum
+- [ ] Two Sum
 
 ## Grouping
 
-* Group Anagrams
+- [ ] Group Anagrams
 
 ## Prefix + Hashing
 
-* Subarray Sum Equals K
-* Contiguous Array
+- [ ] Subarray Sum Equals K
+- [ ] Contiguous Array
 
 ## Mapping
 
-* Isomorphic Strings
-* Word Pattern
+- [ ] Isomorphic Strings
+- [ ] Word Pattern
 
 ## Structural/state
 
-* Happy Number with set approach
+- [ ] Happy Number with set approach
 
 That's plenty for your first deep pass.
 
 ---
-
 # 34. Pattern Recognition
 
 Train yourself to notice these signals.

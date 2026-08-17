@@ -1474,17 +1474,11 @@ You don't need 50.
 
 ### Fixed-size
 
-**1. Maximum Sum Subarray of Size K**
+- [ ] **1. Maximum Sum Subarray of Size K** — Learn basic window maintenance.
 
-Learn basic window maintenance.
+- [ ] **2. Maximum Average Subarray I** — Same pattern.
 
-**2. Maximum Average Subarray I**
-
-Same pattern.
-
-**3. Maximum Number of Vowels in a Substring of Given Length**
-
-Learn maintaining counts instead of sums.
+- [ ] **3. Maximum Number of Vowels in a Substring of Given Length** — Learn maintaining counts instead of sums.
 
 ---
 
@@ -1492,13 +1486,9 @@ Learn maintaining counts instead of sums.
 
 ### Variable-size beginner
 
-**4. Minimum Size Subarray Sum**
+- [ ] **4. Minimum Size Subarray Sum** — Learn expand + shrink with positive values.
 
-Learn expand + shrink with positive values.
-
-**5. Longest Substring Without Repeating Characters**
-
-Learn window + set/frequency.
+- [ ] **5. Longest Substring Without Repeating Characters** — Learn window + set/frequency.
 
 ---
 
@@ -1506,25 +1496,11 @@ Learn window + set/frequency.
 
 ### Variable-size intermediate
 
-**6. Longest Repeating Character Replacement**
+- [ ] **6. Longest Repeating Character Replacement** — Learn a more subtle validity condition.
 
-Learn a more subtle validity condition.
+- [ ] **7. Fruit Into Baskets** — Essentially: at most 2 distinct values.
 
-**7. Fruit Into Baskets**
-
-Essentially:
-
-```text
-at most 2 distinct values
-```
-
-**8. Max Consecutive Ones III**
-
-Learn:
-
-```text
-at most K violations
-```
+- [ ] **8. Max Consecutive Ones III** — Learn: at most K violations.
 
 ---
 
@@ -1532,19 +1508,9 @@ at most K violations
 
 ### Advanced
 
-**9. Minimum Window Substring**
+- [ ] **9. Minimum Window Substring** — Learn requirements/frequency matching.
 
-Learn requirements/frequency matching.
-
-**10. Subarrays with K Different Integers**
-
-Learn:
-
-```text
-exactly K
-=
-atMost(K) - atMost(K-1)
-```
+- [ ] **10. Subarrays with K Different Integers** — Learn: exactly K = atMost(K) - atMost(K-1).
 
 Don't jump to these before the basics.
 

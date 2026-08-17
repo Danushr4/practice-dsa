@@ -850,40 +850,39 @@ You don't need hundreds.
 
 ### Stack fundamentals
 
-* Implement Stack
-* Valid Parentheses
-* Min Stack
-* Evaluate Reverse Polish Notation
-* Simplify Path
+- [ ] Implement Stack
+- [ ] Valid Parentheses
+- [ ] Min Stack
+- [ ] Evaluate Reverse Polish Notation
+- [ ] Simplify Path
 
 ### Monotonic Stack
 
-* Next Greater Element
-* Daily Temperatures
-* Stock Span
-* Largest Rectangle in Histogram
+- [ ] Next Greater Element
+- [ ] Daily Temperatures
+- [ ] Stock Span
+- [ ] Largest Rectangle in Histogram
 
 ### Queue fundamentals
 
-* Implement Queue
-* Implement Circular Queue
-* Number of Recent Calls / simple stream queue
+- [ ] Implement Queue
+- [ ] Implement Circular Queue
+- [ ] Number of Recent Calls / simple stream queue
 
 ### Queue/BFS
 
-* Binary Tree Level Order Traversal later with trees
-* Rotting Oranges later with grids
-* Shortest Path in Binary Matrix later with graphs/grids
+- [ ] Binary Tree Level Order Traversal later with trees
+- [ ] Rotting Oranges later with grids
+- [ ] Shortest Path in Binary Matrix later with graphs/grids
 
 ### Deque
 
-* Implement Deque
-* Sliding Window Maximum
+- [ ] Implement Deque
+- [ ] Sliding Window Maximum
 
 That's enough for the core pass.
 
 ---
-
 # 27. Pattern Recognition
 
 Train these clues.

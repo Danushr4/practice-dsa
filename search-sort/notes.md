@@ -1885,77 +1885,76 @@ Choose representatives for each concept.
 
 ## Linear search / basics
 
-* Find maximum in unsorted array
-* Search in unsorted matrix with sorted rows conceptually later
+- [ ] Find maximum in unsorted array
+- [ ] Search in unsorted matrix with sorted rows conceptually later
 
 ## Binary search exact / bounds
 
-* Binary Search
-* Search Insert Position
-* Find First and Last Position of Element in Sorted Array
-* Sqrt(x) / integer square root
+- [ ] Binary Search
+- [ ] Search Insert Position
+- [ ] Find First and Last Position of Element in Sorted Array
+- [ ] Sqrt(x) / integer square root
 
 ## Rotated / modified arrays
 
-* Search in Rotated Sorted Array
-* Find Minimum in Rotated Sorted Array
-* Search a 2D Matrix (if sorted structure)
+- [ ] Search in Rotated Sorted Array
+- [ ] Find Minimum in Rotated Sorted Array
+- [ ] Search a 2D Matrix (if sorted structure)
 
 ## Binary search on answer
 
-* Koko Eating Bananas
-* Capacity To Ship Packages Within D Days
-* Split Array Largest Sum
-* Aggressive Cows style problems
-* Minimum Number of Days to Make m Bouquets
+- [ ] Koko Eating Bananas
+- [ ] Capacity To Ship Packages Within D Days
+- [ ] Split Array Largest Sum
+- [ ] Aggressive Cows style problems
+- [ ] Minimum Number of Days to Make m Bouquets
 
 ## Sorting fundamentals
 
-* Implement Merge Sort
-* Implement Quick Sort
-* Sort an Array
-* Sort Colors (Dutch national flag / counting)
+- [ ] Implement Merge Sort
+- [ ] Implement Quick Sort
+- [ ] Sort an Array
+- [ ] Sort Colors (Dutch national flag / counting)
 
 ## Sort + scan / intervals
 
-* Merge Intervals
-* Insert Interval
-* Non-overlapping Intervals
-* Meeting Rooms / Meeting Rooms II
+- [ ] Merge Intervals
+- [ ] Insert Interval
+- [ ] Non-overlapping Intervals
+- [ ] Meeting Rooms / Meeting Rooms II
 
 ## Sort + two pointers
 
-* Two Sum II
-* 3Sum
-* 3Sum Closest
-* Container With Most Water (not always sort-first, but two-pointer family)
+- [ ] Two Sum II
+- [ ] 3Sum
+- [ ] 3Sum Closest
+- [ ] Container With Most Water (not always sort-first, but two-pointer family)
 
 ## Duplicates / frequency
 
-* Contains Duplicate
-* Find All Duplicates in an Array
-* Majority Element (sort or Boyer-Moore later)
+- [ ] Contains Duplicate
+- [ ] Find All Duplicates in an Array
+- [ ] Majority Element (sort or Boyer-Moore later)
 
 ## Selection / heap / quickselect
 
-* Kth Largest Element in an Array
-* Top K Frequent Elements (heap; sorting also works)
+- [ ] Kth Largest Element in an Array
+- [ ] Top K Frequent Elements (heap; sorting also works)
 
 ## Custom sort / greedy
 
-* Largest Number
-* Reorganize String
-* Assign Cookies
+- [ ] Largest Number
+- [ ] Reorganize String
+- [ ] Assign Cookies
 
 ## Non-comparison / bounded keys
 
-* Sort Characters By Frequency
-* Relative Sort Array
+- [ ] Sort Characters By Frequency
+- [ ] Relative Sort Array
 
 That's enough for a first deep pass.
 
 ---
-
 # 30. For EVERY Searching / Sorting Problem
 
 Use this thinking process:

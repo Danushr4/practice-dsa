@@ -1968,62 +1968,61 @@ Choose problems representing each pattern.
 
 ### Fundamentals
 
-- Subsets
-- Subsets II
-- Permutations
-- Permutations II
-- Combinations
-- Combinations II
+- [ ] Subsets
+- [ ] Subsets II
+- [ ] Permutations
+- [ ] Permutations II
+- [ ] Combinations
+- [ ] Combinations II
 
 ### Target / Sum
 
-- Combination Sum
-- Combination Sum II
-- Combination Sum III
-- Partition Equal Subset Sum (recognize — DP common, backtracking for understanding)
+- [ ] Combination Sum
+- [ ] Combination Sum II
+- [ ] Combination Sum III
+- [ ] Partition Equal Subset Sum (recognize — DP common, backtracking for understanding)
 
 ### Constraint Placement
 
-- N-Queens
-- N-Queens II (count)
-- Valid Sudoku (validation, not full solve)
-- Sudoku Solver
+- [ ] N-Queens
+- [ ] N-Queens II (count)
+- [ ] Valid Sudoku (validation, not full solve)
+- [ ] Sudoku Solver
 
 ### Grid / Path
 
-- Word Search
-- Word Search II
-- Unique Paths III (backtracking acceptable for small grids)
-- Robot Room Cleaner (conceptual)
+- [ ] Word Search
+- [ ] Word Search II
+- [ ] Unique Paths III (backtracking acceptable for small grids)
+- [ ] Robot Room Cleaner (conceptual)
 
 ### String Partitioning / Construction
 
-- Palindrome Partitioning
-- Palindrome Partitioning II (DP optimization)
-- Generate Parentheses
-- Letter Combinations of a Phone Number
-- Restore IP Addresses
+- [ ] Palindrome Partitioning
+- [ ] Palindrome Partitioning II (DP optimization)
+- [ ] Generate Parentheses
+- [ ] Letter Combinations of a Phone Number
+- [ ] Restore IP Addresses
 
 ### Tree Paths
 
-- Binary Tree Paths
-- Path Sum II
-- Sum Root to Leaf Numbers
+- [ ] Binary Tree Paths
+- [ ] Path Sum II
+- [ ] Sum Root to Leaf Numbers
 
 ### Harder / Compositional
 
-- Remove Invalid Parentheses
-- Expression Add Operators
-- Word Pattern II
-- Matchsticks to Square
-- Split Array into Fibonacci Sequence
-- Beautiful Arrangement
-- Gray Code (backtracking or formula)
+- [ ] Remove Invalid Parentheses
+- [ ] Expression Add Operators
+- [ ] Word Pattern II
+- [ ] Matchsticks to Square
+- [ ] Split Array into Fibonacci Sequence
+- [ ] Beautiful Arrangement
+- [ ] Gray Code (backtracking or formula)
 
 That is enough to understand the major backtracking patterns deeply.
 
 ---
-
 # 30. For EVERY Backtracking Problem
 
 Use this thinking process:

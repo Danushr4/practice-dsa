@@ -645,20 +645,19 @@ Binary Search candidate
 
 A good deep pass:
 
-- Binary Search
-- Search Insert Position
-- First and Last Position of Element
-- Lower Bound
-- Upper Bound
-- Search in Rotated Sorted Array
-- Find Minimum in Rotated Sorted Array
-- Koko Eating Bananas
-- Capacity To Ship Packages Within D Days
+- [ ] Binary Search
+- [ ] Search Insert Position
+- [ ] First and Last Position of Element
+- [ ] Lower Bound
+- [ ] Upper Bound
+- [ ] Search in Rotated Sorted Array
+- [ ] Find Minimum in Rotated Sorted Array
+- [ ] Koko Eating Bananas
+- [ ] Capacity To Ship Packages Within D Days
 
 That is enough to understand the major forms.
 
 ---
-
 
 
 # In-place Array Manipulation
@@ -1299,20 +1298,19 @@ Stable compaction
 
 For a strong first pass:
 
-- Reverse String / Array
-- Move Zeroes
-- Remove Element
-- Remove Duplicates from Sorted Array
-- Rotate Array
-- Sort Colors
-- Partition Array Around Pivot
-- Reverse Words in a String conceptually
-- Rotate Image later with matrices
+- [ ] Reverse String / Array
+- [ ] Move Zeroes
+- [ ] Remove Element
+- [ ] Remove Duplicates from Sorted Array
+- [ ] Rotate Array
+- [ ] Sort Colors
+- [ ] Partition Array Around Pivot
+- [ ] Reverse Words in a String conceptually
+- [ ] Rotate Image later with matrices
 
 That's enough.
 
 ---
-
 
 
 # 19. For every in-place problem, ask

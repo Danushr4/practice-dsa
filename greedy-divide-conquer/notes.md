@@ -2131,110 +2131,108 @@ You don't need 100 random problems. Cover each pattern.
 
 ### Fundamentals / Proof
 
-- Activity Selection (classic)
-- Fractional Knapsack
-- Minimum Number of Arrows to Burst Balloons (intervals)
+- [ ] Activity Selection (classic)
+- [ ] Fractional Knapsack
+- [ ] Minimum Number of Arrows to Burst Balloons (intervals)
 
 ### Intervals
 
-- Meeting Rooms
-- Meeting Rooms II
-- Non-overlapping Intervals (min removals)
-- Partition Labels
+- [ ] Meeting Rooms
+- [ ] Meeting Rooms II
+- [ ] Non-overlapping Intervals (min removals)
+- [ ] Partition Labels
 
 ### Reachability / Jumps
 
-- Jump Game
-- Jump Game II
-- Minimum Number of Taps to Open Water Valve
+- [ ] Jump Game
+- [ ] Jump Game II
+- [ ] Minimum Number of Taps to Open Water Valve
 
 ### Array Greedy
 
-- Gas Station
-- Assign Cookies
-- Lemonade Change
-- Queue Reconstruction by Height
+- [ ] Gas Station
+- [ ] Assign Cookies
+- [ ] Lemonade Change
+- [ ] Queue Reconstruction by Height
 
 ### Stack Greedy
 
-- Remove K Digits
-- Create Maximum Number
-- Monotonic stack variants
+- [ ] Remove K Digits
+- [ ] Create Maximum Number
+- [ ] Monotonic stack variants
 
 ### Heap Greedy
 
-- Task Scheduler
-- Reorganize String
-- IPO
-- Minimum Cost to Connect Sticks
+- [ ] Task Scheduler
+- [ ] Reorganize String
+- [ ] IPO
+- [ ] Minimum Cost to Connect Sticks
 
 ### Two Pointer Greedy
 
-- Boats to Save People
-- Two City Scheduling
+- [ ] Boats to Save People
+- [ ] Two City Scheduling
 
 ### Graph Greedy (connect to Phase 8)
 
-- Minimum Spanning Tree
-- Dijkstra Shortest Path
+- [ ] Minimum Spanning Tree
+- [ ] Dijkstra Shortest Path
 
 ### Tricky / Know When NOT Greedy
 
-- Coin Change (DP)
-- 0/1 Knapsack (DP)
-- Weighted Interval Scheduling (DP)
+- [ ] Coin Change (DP)
+- [ ] 0/1 Knapsack (DP)
+- [ ] Weighted Interval Scheduling (DP)
 
 ---
-
 # 51. Problems to Practice — Divide and Conquer
 
 ### Sorting / Selection
 
-- Implement Merge Sort
-- Implement Quicksort
-- Sort an Array (LC — know both)
-- Kth Largest Element (Quickselect)
+- [ ] Implement Merge Sort
+- [ ] Implement Quicksort
+- [ ] Sort an Array (LC — know both)
+- [ ] Kth Largest Element (Quickselect)
 
 ### Binary Search
 
-- Binary Search
-- Search Insert Position
-- Find First and Last Position
-- Search in Rotated Sorted Array
-- Median of Two Sorted Arrays (hard D&C)
+- [ ] Binary Search
+- [ ] Search Insert Position
+- [ ] Find First and Last Position
+- [ ] Search in Rotated Sorted Array
+- [ ] Median of Two Sorted Arrays (hard D&C)
 
 ### Binary Search on Answer
 
-- Koko Eating Bananas
-- Capacity To Ship Packages Within D Days
-- Split Array Largest Sum
-- Aggressive Cows (classic)
+- [ ] Koko Eating Bananas
+- [ ] Capacity To Ship Packages Within D Days
+- [ ] Split Array Largest Sum
+- [ ] Aggressive Cows (classic)
 
 ### D&C Combine
 
-- Count of Inversions
-- Maximum Subarray (D&C version)
-- Reverse Pairs (merge sort variant)
+- [ ] Count of Inversions
+- [ ] Maximum Subarray (D&C version)
+- [ ] Reverse Pairs (merge sort variant)
 
 ### Power / Math
 
-- Pow(x, n)
-- Sqrt(x) (binary search)
-- Matrix exponentiation for Fibonacci
+- [ ] Pow(x, n)
+- [ ] Sqrt(x) (binary search)
+- [ ] Matrix exponentiation for Fibonacci
 
 ### Geometry (stretch)
 
-- Closest Pair of Points
+- [ ] Closest Pair of Points
 
 ### Tree D&C
 
-- Maximum Depth of Binary Tree
-- Diameter of Binary Tree
-- Balanced Binary Tree
-- Construct BST from Preorder (with bounds)
+- [ ] Maximum Depth of Binary Tree
+- [ ] Diameter of Binary Tree
+- [ ] Balanced Binary Tree
+- [ ] Construct BST from Preorder (with bounds)
 
 ---
-
 # 52. For EVERY Greedy Problem
 
 Use this thinking process:

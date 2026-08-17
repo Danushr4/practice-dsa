@@ -1461,66 +1461,65 @@ Choose representative problems per concept.
 
 ### Strongly Connected Components
 
-- Count SCCs
-- Condensation graph construction
-- Minimum edges to make graph strongly connected (concept)
-- 2-SAT template problems
+- [ ] Count SCCs
+- [ ] Condensation graph construction
+- [ ] Minimum edges to make graph strongly connected (concept)
+- [ ] 2-SAT template problems
 
 ### Bridges and Articulation Points
 
-- Critical Connections (LeetCode 1192)
-- Articulation Points in Graph (classic)
-- Network reliability counting
+- [ ] Critical Connections (LeetCode 1192)
+- [ ] Articulation Points in Graph (classic)
+- [ ] Network reliability counting
 
 ### Network Flow
 
-- Maximum Flow template
-- Minimum cut extraction
-- Flow with vertex capacity (split node)
-- Project selection (profit/cost)
+- [ ] Maximum Flow template
+- [ ] Minimum cut extraction
+- [ ] Flow with vertex capacity (split node)
+- [ ] Project selection (profit/cost)
 
 ### Bipartite Matching
 
-- Assign jobs to workers
-- Minimum path cover in DAG
-- Grid matching (board problems)
-- Bipartite matching via Hopcroft-Karp (larger inputs)
+- [ ] Assign jobs to workers
+- [ ] Minimum path cover in DAG
+- [ ] Grid matching (board problems)
+- [ ] Bipartite matching via Hopcroft-Karp (larger inputs)
 
 ### LCA
 
-- LCA of binary tree (LeetCode 236)
-- Distance between nodes in tree
-- K-th ancestor query
-- LCA + binary lifting template
+- [ ] LCA of binary tree (LeetCode 236)
+- [ ] Distance between nodes in tree
+- [ ] K-th ancestor query
+- [ ] LCA + binary lifting template
 
 ### 2-SAT
 
-- Two-satisfiability template
-- Scheduling with OR constraints
-- Party invitation (classic)
+- [ ] Two-satisfiability template
+- [ ] Scheduling with OR constraints
+- [ ] Party invitation (classic)
 
 ### Euler Path/Circuit
 
-- Reconstruct itinerary (variant)
-- Valid arrangement of dominoes
-- De Bruijn sequence construction (concept)
+- [ ] Reconstruct itinerary (variant)
+- [ ] Valid arrangement of dominoes
+- [ ] De Bruijn sequence construction (concept)
 
 ### Heavy-Light Decomposition
 
-- Path sum queries on tree
-- Path max queries
-- Combined update + query on tree paths
+- [ ] Path sum queries on tree
+- [ ] Path max queries
+- [ ] Combined update + query on tree paths
 
 ### Composition
 
-- 2-SAT (implication + SCC + assignment)
-- Min vertex cover in bipartite (matching + Kőnig)
-- Tree path queries (HLD + segment tree + LCA)
+- [ ] 2-SAT (implication + SCC + assignment)
+- [ ] Min vertex cover in bipartite (matching + Kőnig)
+- [ ] Tree path queries (HLD + segment tree + LCA)
 
 That is enough to understand major advanced graph patterns deeply.
 
 ---
-
 # 19. For EVERY Advanced Graph Problem
 
 Use the same learning process from Arrays, Linked Lists, Hash Tables, and Graphs.

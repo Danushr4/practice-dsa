@@ -1838,71 +1838,53 @@ You don't need 200 random problems. Cover each structure and pattern.
 
 ### Fenwick Tree / BIT
 
-```text
-Range Sum Query - Mutable (LC 307)
-Count of Smaller Numbers After Self (LC 315)
-Reverse Pairs (LC 493)
-```
+- [ ] Range Sum Query - Mutable (LC 307)
+- [ ] Count of Smaller Numbers After Self (LC 315)
+- [ ] Reverse Pairs (LC 493)
 
 ### Segment Tree
 
-```text
-Range Sum Query - Mutable (also seg tree solution)
-Range Minimum Query (classical)
-My Calendar I/II/III (interval / segment tree on time)
-Count of Range Sum (harder — merge or BIT)
-```
+- [ ] Range Sum Query - Mutable (also seg tree solution)
+- [ ] Range Minimum Query (classical)
+- [ ] My Calendar I/II/III (interval / segment tree on time)
+- [ ] Count of Range Sum (harder — merge or BIT)
 
 ### Lazy Segment Tree
 
-```text
-Range Addition queries (competitive)
-Falling Snow / range update templates
-```
+- [ ] Range Addition queries (competitive)
+- [ ] Falling Snow / range update templates
 
 ### Sparse Table
 
-```text
-Static RMQ
-Maximum of Minimum Values in subarrays (conceptual)
-```
+- [ ] Static RMQ
+- [ ] Maximum of Minimum Values in subarrays (conceptual)
 
 ### DSU
 
-```text
-Number of Provinces (LC 547)
-Redundant Connection (LC 684)
-Accounts Merge (LC 721)
-Connecting Cities With Minimum Cost (LC 1135 — Kruskal)
-Last Day Where You Can Still Cross (LC 1970)
-```
+- [ ] Number of Provinces (LC 547)
+- [ ] Redundant Connection (LC 684)
+- [ ] Accounts Merge (LC 721)
+- [ ] Connecting Cities With Minimum Cost (LC 1135 — Kruskal)
+- [ ] Last Day Where You Can Still Cross (LC 1970)
 
 ### Sqrt / Mo
 
-```text
-D-Query style problems (competitive)
-Some "distinct in range" with constraints
-```
+- [ ] D-Query style problems (competitive)
+- [ ] Some "distinct in range" with constraints
 
 ### PBDS / Order statistics
 
-```text
-Order statistic tree practice (Codeforces)
-K-th number in dynamic stream (conceptual)
-```
+- [ ] Order statistic tree practice (Codeforces)
+- [ ] K-th number in dynamic stream (conceptual)
 
 ### Implicit Treap
 
-```text
-Array manipulation with reverse (advanced CF)
-```
+- [ ] Array manipulation with reverse (advanced CF)
 
 ### Composition problems
 
-```text
-Count of Smaller Numbers After Self → BIT + compression
-Rectangle Area II → coordinate compress + sweep + seg tree
-```
+- [ ] Count of Smaller Numbers After Self → BIT + compression
+- [ ] Rectangle Area II → coordinate compress + sweep + seg tree
 
 ---
 
