@@ -105,6 +105,8 @@ Learn:
 
 ---
 
+
+
 # 2. The Problem Backtracking Solves
 
 Suppose you need all subsets of `[1, 2, 3]`.
@@ -145,12 +147,14 @@ Backtracking walks this tree.
 
 Compare approaches:
 
-| Approach | Idea | Typical issue |
-| -------- | ---- | ------------- |
-| Brute force | Generate all, then filter | No early exit |
-| Backtracking | Build + prune + undo | Must manage state carefully |
-| DP | Overlapping subproblems + optimal substructure | Not for "list all solutions" unless counting |
-| Greedy | One local best choice | May miss valid global configurations |
+
+| Approach     | Idea                                           | Typical issue                                |
+| ------------ | ---------------------------------------------- | -------------------------------------------- |
+| Brute force  | Generate all, then filter                      | No early exit                                |
+| Backtracking | Build + prune + undo                           | Must manage state carefully                  |
+| DP           | Overlapping subproblems + optimal substructure | Not for "list all solutions" unless counting |
+| Greedy       | One local best choice                          | May miss valid global configurations         |
+
 
 Backtracking shines when:
 
@@ -162,6 +166,8 @@ The search space is exponential but prunable
 ```
 
 ---
+
+
 
 # 3. The Three Pillars: Choice Space, Constraints, Goal
 
@@ -185,6 +191,8 @@ If you cannot name the choice space, you cannot write the algorithm.
 
 ---
 
+
+
 ## Constraints
 
 What makes a partial or complete solution invalid?
@@ -204,6 +212,8 @@ Constraints are your **pruning hooks**.
 The earlier a constraint can fire, the faster the search.
 
 ---
+
+
 
 ## Goal
 
@@ -228,6 +238,8 @@ Be precise:
 ```
 
 ---
+
+
 
 # 4. The Universal Template: Choose → Explore → Unchoose
 
@@ -272,6 +284,8 @@ The **unchoose** step is what separates backtracking from naive DFS that mutates
 
 ---
 
+
+
 ## Python Template
 
 ```python
@@ -290,6 +304,8 @@ def backtrack(path, options):
 ```
 
 ---
+
+
 
 ## C++ Template
 
@@ -315,7 +331,11 @@ void backtrack(/* state */) {
 
 ---
 
+
+
 ## Critical Rules
+
+
 
 ### 1. Copy when saving solutions
 
@@ -323,6 +343,8 @@ void backtrack(/* state */) {
 result.append(path[:])   # correct
 result.append(path)     # wrong — path mutates later
 ```
+
+
 
 ### 2. Undo every mutation
 
@@ -355,6 +377,8 @@ remaining sum == 0
 ```
 
 ---
+
+
 
 # 5. The Decision Tree Mental Model
 
@@ -391,6 +415,8 @@ Implementing pruning
 ```
 
 ---
+
+
 
 # 6. Subsets (Power Set)
 
@@ -436,6 +462,8 @@ Decision tree for `[1,2]`:
 
 ---
 
+
+
 ## Approach B — Iterative over start index
 
 Common pattern when building combinations/subsets without reuse:
@@ -454,6 +482,8 @@ This avoids duplicate subsets like `[2,1]` when input order is `[1,2]`.
 
 ---
 
+
+
 ## Complexity
 
 ```text
@@ -462,6 +492,8 @@ Space: O(n)         — recursion depth, excluding output
 ```
 
 ---
+
+
 
 # 7. Permutations
 
@@ -484,6 +516,8 @@ Pick any element not yet used
 ```
 
 ---
+
+
 
 ## Approach — Used array / set
 
@@ -513,6 +547,8 @@ def permute(nums):
 
 ---
 
+
+
 ## Permutations with duplicates
 
 Input: `[1, 1, 2]`
@@ -535,6 +571,8 @@ Prevents symmetric duplicate branches
 
 ---
 
+
+
 ## Complexity
 
 ```text
@@ -543,6 +581,8 @@ Space: O(n)
 ```
 
 ---
+
+
 
 # 8. Combinations
 
@@ -593,14 +633,18 @@ start=1
 
 ---
 
+
+
 ## Subsets vs Combinations vs Permutations
 
-| Problem | Order matters? | Reuse allowed? | Fixed size? |
-| ------- | -------------- | -------------- | ----------- |
-| Subsets | No | No | No |
-| Combinations | No | No | Yes (k) |
-| Permutations | Yes | No | Yes (n) |
-| Combination Sum | No | Maybe | No |
+
+| Problem         | Order matters? | Reuse allowed? | Fixed size? |
+| --------------- | -------------- | -------------- | ----------- |
+| Subsets         | No             | No             | No          |
+| Combinations    | No             | No             | Yes (k)     |
+| Permutations    | Yes            | No             | Yes (n)     |
+| Combination Sum | No             | Maybe          | No          |
+
 
 Recognition:
 
@@ -613,7 +657,11 @@ Recognition:
 
 ---
 
+
+
 # 9. Combination Sum Family
+
+
 
 ## Combination Sum I
 
@@ -645,6 +693,8 @@ def combinationSum(candidates, target):
 
 ---
 
+
+
 ## Combination Sum II
 
 ```text
@@ -662,6 +712,8 @@ Key steps:
 ```
 
 ---
+
+
 
 ## Combination Sum III
 
@@ -685,6 +737,8 @@ not enough numbers left to reach k
 ```
 
 ---
+
+
 
 # 10. Pattern 1 — Include / Exclude (Subsets)
 
@@ -721,6 +775,8 @@ Letter Case Permutation (variant)
 
 ---
 
+
+
 # 11. Pattern 2 — Permutations (Choose Unused)
 
 ```text
@@ -753,6 +809,8 @@ Beautiful Arrangement
 
 ---
 
+
+
 # 12. Pattern 3 — Combinations (Choose k, Forward Only)
 
 ```text
@@ -784,6 +842,8 @@ Combination Sum III
 ```
 
 ---
+
+
 
 # 13. Pattern 4 — Target Search (Combination Sum)
 
@@ -818,6 +878,8 @@ Split Array into Fibonacci Sequence
 ```
 
 ---
+
+
 
 # 14. Pattern 5 — Constraint Placement (N-Queens)
 
@@ -867,6 +929,8 @@ diag2 = set()   # row + col
 
 ---
 
+
+
 ## N-Queens Template Sketch
 
 ```python
@@ -912,6 +976,8 @@ Track occupied columns/diagonals/regions
 
 ---
 
+
+
 # 15. Pattern 6 — Fill Empty Cells (Sudoku)
 
 Sudoku is constraint placement on a grid.
@@ -940,6 +1006,8 @@ Recurse or backtrack
 ```
 
 ---
+
+
 
 ## Sudoku Solver Pattern
 
@@ -976,6 +1044,8 @@ def solveSudoku(board):
 
 ---
 
+
+
 ## Optimizations
 
 ```text
@@ -1001,6 +1071,8 @@ Often one solution, not all
 ```
 
 ---
+
+
 
 # 16. Pattern 7 — Grid Path Search (Word Search)
 
@@ -1032,6 +1104,8 @@ next char matches
 ```
 
 ---
+
+
 
 ## Word Search Template
 
@@ -1067,6 +1141,8 @@ def exist(board, word):
 
 ---
 
+
+
 ## Word Search II (Multiple Words)
 
 Naive: run Word Search per word.
@@ -1097,6 +1173,8 @@ Multi-start from each cell
 
 ---
 
+
+
 # 17. Pattern 8 — Partitioning (Palindrome Partitioning)
 
 Split a string into parts satisfying a property.
@@ -1116,6 +1194,8 @@ If prefix is valid palindrome → recurse on suffix
 ```
 
 ---
+
+
 
 ## Palindrome Partitioning Template
 
@@ -1168,6 +1248,8 @@ Recurse on remainder
 ```
 
 ---
+
+
 
 # 18. Pattern 9 — Valid Construction (Generate Parentheses)
 
@@ -1230,6 +1312,8 @@ Binary strings with no consecutive ones (variant)
 
 ---
 
+
+
 # 19. Pattern 10 — Cartesian Product (Letter Combinations)
 
 ```text
@@ -1288,6 +1372,8 @@ When you see:
 
 ---
 
+
+
 # 20. Pattern 11 — Path Collection on Graph/Tree
 
 Collect all root-to-leaf paths.
@@ -1332,6 +1418,8 @@ All Paths From Source to Target (DAG/graph)
 
 ---
 
+
+
 # 21. Pattern 12 — State-Space Search (General DFS)
 
 Some problems don't look like subsets/perms but are still backtracking.
@@ -1371,6 +1459,8 @@ Backtracking for all paths or deep structural search
 
 ---
 
+
+
 # 22. Pruning Techniques
 
 Pruning is what makes backtracking practical.
@@ -1378,6 +1468,8 @@ Pruning is what makes backtracking practical.
 Without pruning, you are just brute force with extra steps.
 
 ---
+
+
 
 ## 1. Feasibility Pruning
 
@@ -1390,6 +1482,8 @@ Combination Sum: remaining < 0
 ```
 
 ---
+
+
 
 ## 2. Bound Pruning
 
@@ -1408,6 +1502,8 @@ if current_sum > target:
 
 ---
 
+
+
 ## 3. Ordering Pruning
 
 Process choices in an order that fails faster.
@@ -1418,6 +1514,8 @@ Try most constrained cell first (Sudoku MRV)
 ```
 
 ---
+
+
 
 ## 4. Duplicate Avoidance Pruning
 
@@ -1436,6 +1534,8 @@ if i > start and nums[i] == nums[i-1]:
 
 ---
 
+
+
 ## 5. Remaining-Count Pruning
 
 ```text
@@ -1451,6 +1551,8 @@ if remaining < need:
 
 ---
 
+
+
 ## 6. Early Success Exit
 
 When only one solution needed:
@@ -1464,6 +1566,8 @@ Don't collect all leaves.
 
 ---
 
+
+
 ## 7. Trie / Prefix Pruning
 
 Word Search II:
@@ -1473,6 +1577,8 @@ If current board path is not a prefix in trie → stop
 ```
 
 ---
+
+
 
 ## 8. Bitmask Pruning
 
@@ -1485,11 +1591,15 @@ Fast subset/permutation enumeration
 
 ---
 
+
+
 # 23. Backtracking vs DFS vs Brute Force vs DP
 
 This comparison is essential.
 
 ---
+
+
 
 ## Backtracking vs DFS
 
@@ -1527,6 +1637,8 @@ If exploration is monotonic (never revisit) → plain DFS
 
 ---
 
+
+
 ## Backtracking vs Brute Force
 
 Brute force:
@@ -1557,15 +1669,19 @@ The win is **early cut-off**.
 
 ---
 
+
+
 ## Backtracking vs Dynamic Programming
 
-| | Backtracking | DP |
-| --- | --- | --- |
-| Goal | All/one configurations | Optimal value or count |
-| Overlapping subproblems | Usually no (paths are distinct) | Required |
-| Optimal substructure | Not required | Required |
-| State | Path + choices | Table keyed by subproblem |
-| Output | List of solutions | Number / best value |
+
+|                         | Backtracking                    | DP                        |
+| ----------------------- | ------------------------------- | ------------------------- |
+| Goal                    | All/one configurations          | Optimal value or count    |
+| Overlapping subproblems | Usually no (paths are distinct) | Required                  |
+| Optimal substructure    | Not required                    | Required                  |
+| State                   | Path + choices                  | Table keyed by subproblem |
+| Output                  | List of solutions               | Number / best value       |
+
 
 Example — Fibonacci:
 
@@ -1598,6 +1714,8 @@ or just backtracking if n is small
 
 ---
 
+
+
 ## Backtracking vs Greedy
 
 Greedy:
@@ -1618,11 +1736,15 @@ If problem asks for **one** solution and greedy proof exists, don't backtrack.
 
 ---
 
+
+
 # 24. Complexity Analysis
 
 Backtracking often looks scary but follows patterns.
 
 ---
+
+
 
 ## Time
 
@@ -1654,6 +1776,8 @@ O(b^d)
 
 ---
 
+
+
 ## Space
 
 ```text
@@ -1674,7 +1798,11 @@ Don't forget output space counts toward total space in analysis interviews.
 
 ---
 
+
+
 # 25. Implementation Pitfalls
+
+
 
 ## 1. Forgetting to undo
 
@@ -1684,11 +1812,15 @@ backtrack(...)
 # missing visited.remove(cell)
 ```
 
+
+
 ## 2. Shallow copy bugs
 
 ```python
 result.append(path)  # wrong
 ```
+
+
 
 ## 3. Off-by-one in indices
 
@@ -1696,6 +1828,8 @@ result.append(path)  # wrong
 start vs start+1
 i vs i+1 for reuse/no-reuse
 ```
+
+
 
 ## 4. Duplicate results
 
@@ -1712,12 +1846,16 @@ No progress toward base case
 Wrong base case
 ```
 
+
+
 ## 6. Modifying input without restore
 
 ```text
 board[r][c] = '#'
 # must restore
 ```
+
+
 
 ## 7. Global mutable state
 
@@ -1726,6 +1864,8 @@ Harder to reason about.
 Prefer passing state or explicit undo.
 
 ---
+
+
 
 # 26. Pattern Recognition
 
@@ -1811,6 +1951,8 @@ Backtracking with pruning
 
 ---
 
+
+
 # 27. Edge Cases — Extremely Important
 
 Backtracking code breaks on edge cases because recursion + state is fragile.
@@ -1855,6 +1997,8 @@ Very large n — TLE expected, need different algorithm
 
 ---
 
+
+
 ## Subsets / Combinations
 
 ```text
@@ -1867,6 +2011,8 @@ k > n
 
 ---
 
+
+
 ## Permutations
 
 ```text
@@ -1875,6 +2021,8 @@ nums with duplicates
 ```
 
 ---
+
+
 
 ## Combination Sum
 
@@ -1887,6 +2035,8 @@ unlimited reuse vs single use
 
 ---
 
+
+
 ## N-Queens
 
 ```text
@@ -1895,6 +2045,8 @@ n = 2,3 → no solution
 ```
 
 ---
+
+
 
 ## Word Search
 
@@ -1907,6 +2059,8 @@ same cell cannot be reused in one path
 
 ---
 
+
+
 ## Palindrome Partitioning
 
 ```text
@@ -1917,6 +2071,8 @@ all same characters: "aaaa"
 
 ---
 
+
+
 ## Parentheses
 
 ```text
@@ -1925,6 +2081,8 @@ n = 0 → "" (problem dependent)
 ```
 
 ---
+
+
 
 # 28. Draw the Decision Tree
 
@@ -1960,6 +2118,8 @@ Duplicate generation
 
 ---
 
+
+
 # 29. Problems to Practice
 
 You don't need 100 random backtracking problems.
@@ -1975,12 +2135,16 @@ Choose problems representing each pattern.
 - [ ] Combinations
 - [ ] Combinations II
 
+
+
 ### Target / Sum
 
 - [ ] Combination Sum
 - [ ] Combination Sum II
 - [ ] Combination Sum III
 - [ ] Partition Equal Subset Sum (recognize — DP common, backtracking for understanding)
+
+
 
 ### Constraint Placement
 
@@ -1989,12 +2153,16 @@ Choose problems representing each pattern.
 - [ ] Valid Sudoku (validation, not full solve)
 - [ ] Sudoku Solver
 
+
+
 ### Grid / Path
 
 - [ ] Word Search
 - [ ] Word Search II
 - [ ] Unique Paths III (backtracking acceptable for small grids)
 - [ ] Robot Room Cleaner (conceptual)
+
+
 
 ### String Partitioning / Construction
 
@@ -2004,11 +2172,15 @@ Choose problems representing each pattern.
 - [ ] Letter Combinations of a Phone Number
 - [ ] Restore IP Addresses
 
+
+
 ### Tree Paths
 
 - [ ] Binary Tree Paths
 - [ ] Path Sum II
 - [ ] Sum Root to Leaf Numbers
+
+
 
 ### Harder / Compositional
 
@@ -2023,6 +2195,9 @@ Choose problems representing each pattern.
 That is enough to understand the major backtracking patterns deeply.
 
 ---
+
+
+
 # 30. For EVERY Backtracking Problem
 
 Use this thinking process:
@@ -2067,6 +2242,8 @@ That is brute force disguised as recursion.
 
 ---
 
+
+
 # 31. Compare Multiple Approaches
 
 Example: **Subsets**
@@ -2081,6 +2258,8 @@ Time:  O(n * 2^n)
 Space: O(1) extra besides output
 ```
 
+
+
 ### Backtracking
 
 ```text
@@ -2089,6 +2268,8 @@ include/exclude recursion
 Time:  O(n * 2^n)
 Space: O(n) recursion
 ```
+
+
 
 ### Cascading iterative
 
@@ -2107,9 +2288,9 @@ Don't just conclude:
 
 Ask:
 
-* Need only count? → `2^n` formula
-* Need iterative? → bitmask or cascade
-* Need prune by custom constraint? → backtracking shines
+- Need only count? → `2^n` formula
+- Need iterative? → bitmask or cascade
+- Need prune by custom constraint? → backtracking shines
 
 ---
 
@@ -2123,6 +2304,8 @@ Try all paths with undo
 Time:  O(m * n * 4^L) rough
 Space: O(L) recursion
 ```
+
+
 
 ### BFS from each cell
 
@@ -2141,6 +2324,8 @@ Example: **Combination Sum — count ways**
 List all combos
 ```
 
+
+
 ### DP
 
 ```text
@@ -2156,6 +2341,8 @@ Count → DP often better
 ```
 
 ---
+
+
 
 # 32. One Especially Important Mental Shift
 
@@ -2218,6 +2405,8 @@ Once that model is clear, the code is mostly template.
 
 ---
 
+
+
 # 33. Swap-Based Permutations (Alternative)
 
 Another permutation technique — in-place swap:
@@ -2250,15 +2439,19 @@ Both are backtracking.
 
 ---
 
+
+
 # 34. Reuse vs Non-Reuse — Decision Table
 
-| Problem type | Next index after picking i | Why |
-| ------------ | -------------------------- | --- |
-| Combinations | i + 1 | each element once |
-| Combination Sum I | i | reuse allowed |
-| Combination Sum II | i + 1 | each element once |
-| Permutations | any unused | order matters |
-| Subsets (index) | i + 1 for include branch | standard |
+
+| Problem type       | Next index after picking i | Why               |
+| ------------------ | -------------------------- | ----------------- |
+| Combinations       | i + 1                      | each element once |
+| Combination Sum I  | i                          | reuse allowed     |
+| Combination Sum II | i + 1                      | each element once |
+| Permutations       | any unused                 | order matters     |
+| Subsets (index)    | i + 1 for include branch   | standard          |
+
 
 Getting this wrong creates:
 
@@ -2269,6 +2462,8 @@ infinite recursion
 ```
 
 ---
+
+
 
 # 35. When NOT to Use Backtracking
 
@@ -2292,6 +2487,8 @@ n = 50 naive subsets → 2^50 impossible
 Always estimate search space before coding.
 
 ---
+
+
 
 # 36. Branch and Bound (Extension)
 
@@ -2321,6 +2518,8 @@ A good bound eliminates most branches
 
 ---
 
+
+
 # 37. Meet-in-the-Middle (Contrast)
 
 For some subset problems with `n ≈ 40`:
@@ -2341,6 +2540,8 @@ Meet-in-the-middle for larger n, specific sum problems
 ```
 
 ---
+
+
 
 # 38. Real-World Connections
 
@@ -2370,6 +2571,8 @@ No good — forward checking
 You don't need those for interviews, but knowing they exist deepens understanding.
 
 ---
+
+
 
 # 39. Constraint Propagation Preview
 
@@ -2403,6 +2606,8 @@ Mention propagation as optimization if asked
 
 ---
 
+
+
 # 40. Iterative Backtracking (Advanced)
 
 Recursion is natural, but you can simulate with a stack:
@@ -2424,6 +2629,8 @@ Conceptually identical.
 Most interview solutions use recursion.
 
 ---
+
+
 
 # 41. Debugging Backtracking
 
@@ -2448,6 +2655,8 @@ Duplicates on larger inputs with repeated values
 
 ---
 
+
+
 # 42. Lexicographic Order
 
 Some problems require returning results in lex order.
@@ -2466,6 +2675,8 @@ Return first success
 ```
 
 ---
+
+
 
 # 43. Multi-Constraint Problems
 
@@ -2492,6 +2703,8 @@ What is pruned early?
 ```
 
 ---
+
+
 
 # 44. Counting with Backtracking
 
@@ -2522,6 +2735,8 @@ N-Queens II is a clean counting backtracking problem.
 
 ---
 
+
+
 # 45. Memory of Paths vs Bitmasks
 
 For `n ≤ 20`, bitmask DP/backtracking hybrid is common.
@@ -2549,6 +2764,8 @@ def backtrack(mask):
 Useful in competitive programming.
 
 ---
+
+
 
 # 46. The Backtracking Framework (Unified)
 
@@ -2581,6 +2798,8 @@ BACKTRACKING FRAMEWORK
 Memorize the framework, not 50 problem solutions.
 
 ---
+
+
 
 # 47. Walkthrough — Full Trace
 
@@ -2635,6 +2854,8 @@ Tracing small examples builds confidence for harder problems.
 
 ---
 
+
+
 # 48. Walkthrough — N-Queens n=4
 
 One solution:
@@ -2663,6 +2884,8 @@ Pruning eliminates most of 4^4 = 256 naive placements.
 
 ---
 
+
+
 # 49. Interview Communication Tips
 
 When solving backtracking live:
@@ -2685,6 +2908,8 @@ Not:
 > "I'll use recursion."
 
 ---
+
+
 
 # 50. Relationship to Phase 9 (DP) and Phase 8 (Graphs)
 
@@ -2715,6 +2940,8 @@ Word Ladder II (all shortest) → BFS + backtrack reconstruction
 ```
 
 ---
+
+
 
 # Your Complete Backtracking Checklist
 
@@ -2827,6 +3054,8 @@ Once you can **write the universal template from memory**, explain **choose/expl
 
 ---
 
+
+
 # Quick Reference Card
 
 ```text
@@ -2894,6 +3123,8 @@ if close<open: add ')'
 ```
 
 ---
+
+
 
 # Final Mental Model
 

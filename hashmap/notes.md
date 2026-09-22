@@ -1,6 +1,4 @@
-Yes. After **Stacks → Queues → Deques**, the next block should be:
-
-# Hash Tables / Hashing — Complete Deep-Understanding Syllabus
+# Hash Tables / Hashing 
 
 Hashing is one of the most important DSA topics because it introduces a powerful idea:
 
@@ -57,6 +55,8 @@ value
 
 ---
 
+
+
 # 2. Direct Addressing — understand this first
 
 Imagine all keys are guaranteed to be between `0` and `99`.
@@ -99,6 +99,8 @@ That's hashing.
 
 ---
 
+
+
 # 3. Hash Function
 
 A hash function converts:
@@ -139,15 +141,17 @@ Understanding **why collisions are unavoidable and how we handle them** is the h
 
 ---
 
+
+
 # 4. What makes a good hash function?
 
 A good hash function should ideally be:
 
-* Deterministic
-* Fast to compute
-* Distribute keys evenly
-* Minimize clustering
-* Use information from the whole key
+- Deterministic
+- Fast to compute
+- Distribute keys evenly
+- Minimize clustering
+- Use information from the whole key
 
 Deterministic means:
 
@@ -184,6 +188,8 @@ You do **not** need cryptographic hashing here.
 That's a different subject.
 
 ---
+
+
 
 # 5. Hash Table Anatomy
 
@@ -237,6 +243,8 @@ key → existence
 
 ---
 
+
+
 # 6. Hash Map vs Hash Set
 
 Know this clearly.
@@ -263,6 +271,8 @@ Use when you care:
 
 ---
 
+
+
 ### Hash Map
 
 Stores key/value pairs.
@@ -287,6 +297,8 @@ Use when you care:
 > What information is associated with this key?
 
 ---
+
+
 
 # 7. Collision Resolution
 
@@ -326,13 +338,15 @@ search entries in bucket
 
 Understand:
 
-* Insert
-* Search
-* Delete
-* Bucket chains
-* Expected bucket length
+- Insert
+- Search
+- Delete
+- Bucket chains
+- Expected bucket length
 
 ---
+
+
 
 # 8. Open Addressing
 
@@ -375,14 +389,16 @@ wrapping around the table.
 
 Understand:
 
-* Probe sequence
-* Collision
-* Clustering
-* Wrap-around
-* Lookup
-* Insertion
+- Probe sequence
+- Collision
+- Clustering
+- Wrap-around
+- Lookup
+- Insertion
 
 ---
+
+
 
 # 9. Other probing strategies
 
@@ -400,6 +416,8 @@ Simple, but can cause:
 
 ---
 
+
+
 ### Quadratic probing
 
 Probe offsets grow quadratically.
@@ -416,6 +434,8 @@ Helps reduce some clustering.
 
 ---
 
+
+
 ### Double hashing
 
 Use another hash function to determine probe step.
@@ -430,6 +450,8 @@ You don't need to implement every variation initially.
 But understand **why probing strategy matters**.
 
 ---
+
+
 
 # 10. Deletion in Open Addressing
 
@@ -487,6 +509,8 @@ This is a very important example where deletion is **not simply erase the data**
 
 ---
 
+
+
 # 11. Load Factor
 
 One of the most important hash-table concepts.
@@ -530,6 +554,8 @@ Performance deteriorates.
 
 ---
 
+
+
 # 12. Resizing / Rehashing
 
 When load factor crosses some implementation-dependent threshold:
@@ -570,15 +596,19 @@ may produce different bucket positions.
 
 ---
 
+
+
 # 13. Complexity
 
 Typical expected behavior:
 
+
 | Operation | Average / Expected | Worst |
-| --------- | -----------------: | ----: |
-| Insert    |               O(1) |  O(n) |
-| Search    |               O(1) |  O(n) |
-| Delete    |               O(1) |  O(n) |
+| --------- | ------------------ | ----- |
+| Insert    | O(1)               | O(n)  |
+| Search    | O(1)               | O(n)  |
+| Delete    | O(1)               | O(n)  |
+
 
 That word **expected/average** is extremely important.
 
@@ -603,6 +633,8 @@ O(n)
 depending on collision strategy and implementation.
 
 ---
+
+
 
 # 14. Why expected O(1)?
 
@@ -636,6 +668,8 @@ Expected O(1)
 This assumption depends on good distribution and appropriate resizing.
 
 ---
+
+
 
 # 15. Amortized Complexity
 
@@ -671,6 +705,8 @@ This connects directly to what you learned with dynamic arrays.
 
 ---
 
+
+
 # 16. Hashing Pattern 1 — Frequency Counting
 
 Probably the most common pattern.
@@ -698,11 +734,11 @@ for each x:
 
 Used for:
 
-* Character counts
-* Word counts
-* Duplicate frequencies
-* Majority-like problems
-* Anagrams
+- Character counts
+- Word counts
+- Duplicate frequencies
+- Majority-like problems
+- Anagrams
 
 Recognition clue:
 
@@ -715,6 +751,8 @@ Hash Map / Frequency Array
 ```
 
 ---
+
+
 
 # 17. Hashing Pattern 2 — Membership / Seen Set
 
@@ -741,10 +779,10 @@ seen = {}
 
 Useful for:
 
-* Duplicate detection
-* Unique elements
-* Cycle/state detection
-* Visited states
+- Duplicate detection
+- Unique elements
+- Cycle/state detection
+- Visited states
 
 Pattern:
 
@@ -753,6 +791,8 @@ seen.contains(x)
 ```
 
 ---
+
+
 
 # 18. Hashing Pattern 3 — Complement Lookup
 
@@ -796,6 +836,8 @@ O(n)
 
 ---
 
+
+
 # 19. Hashing Pattern 4 — Value → Index Mapping
 
 Sometimes you don't only need to know that something exists.
@@ -816,13 +858,15 @@ Example:
 
 Useful for:
 
-* Two Sum
-* Detecting distances
-* Last occurrence
-* First occurrence
-* Index relationships
+- Two Sum
+- Detecting distances
+- Last occurrence
+- First occurrence
+- Index relationships
 
 ---
+
+
 
 # 20. Hashing Pattern 5 — Grouping
 
@@ -869,6 +913,8 @@ This is a very powerful idea.
 
 ---
 
+
+
 # 21. Hashing Pattern 6 — Prefix Sum + Hash Map
 
 Extremely important.
@@ -907,12 +953,14 @@ is one of the most reusable problem-solving patterns.
 
 Examples:
 
-* Subarray Sum Equals K
-* Zero-sum subarray
-* Equal numbers of categories under transformations
-* Longest subarray satisfying a cumulative condition
+- Subarray Sum Equals K
+- Zero-sum subarray
+- Equal numbers of categories under transformations
+- Longest subarray satisfying a cumulative condition
 
 ---
+
+
 
 # 22. Hashing Pattern 7 — State Encoding
 
@@ -950,13 +998,15 @@ It can remember:
 
 This becomes important later in:
 
-* Graph traversal
-* Dynamic programming
-* Geometry algorithms
-* Simulation
-* Memoization
+- Graph traversal
+- Dynamic programming
+- Geometry algorithms
+- Simulation
+- Memoization
 
 ---
+
+
 
 # 23. Hashing Pattern 8 — Counting Pairs
 
@@ -1000,6 +1050,8 @@ A frequency map may be needed for the second.
 
 ---
 
+
+
 # 24. Hashing Pattern 9 — Deduplication
 
 Input:
@@ -1032,6 +1084,8 @@ This teaches an important lesson:
 
 ---
 
+
+
 # 25. Hashing Pattern 10 — Caching / Memoization Concept
 
 Suppose an expensive calculation has already been performed:
@@ -1055,16 +1109,18 @@ if input exists:
 
 This idea appears later in:
 
-* Dynamic programming
-* Memoization
-* Caches
-* Compilers
-* Geometry processing
-* Applications/services
+- Dynamic programming
+- Memoization
+- Caches
+- Compilers
+- Geometry processing
+- Applications/services
 
 Hash maps are one of the most important foundations behind caching.
 
 ---
+
+
 
 # 26. Strings as Hash Keys
 
@@ -1092,14 +1148,16 @@ Conceptually:
 
 Understand at a conceptual level:
 
-* Hashing sequences
-* Order matters
-* Same string → same expected key behavior
-* Different strings can still collide
+- Hashing sequences
+- Order matters
+- Same string → same expected key behavior
+- Different strings can still collide
 
 You don't need to implement industrial-strength string hashing yet.
 
 ---
+
+
 
 # 27. Equality + Hashing Contract
 
@@ -1135,12 +1193,14 @@ because collisions exist.
 
 This matters a lot with:
 
-* C++ custom hashers
-* Java `hashCode()` / `equals()`
-* C# equality/hash contracts
-* Custom geometry keys
+- C++ custom hashers
+- Java `hashCode()` / `equals()`
+- C# equality/hash contracts
+- Custom geometry keys
 
 ---
+
+
 
 # 28. Mutable Keys
 
@@ -1180,6 +1240,8 @@ This is particularly important when working with geometric objects.
 
 ---
 
+
+
 # 29. Hash Tables vs Trees
 
 Eventually you'll encounter:
@@ -1216,6 +1278,8 @@ Hashing isn't always automatically the best choice.
 
 ---
 
+
+
 # 30. Hash Tables vs Direct Frequency Arrays
 
 Suppose values are only:
@@ -1234,9 +1298,9 @@ count[256]
 
 That's often:
 
-* Simpler
-* Faster
-* More cache-friendly
+- Simpler
+- Faster
+- More cache-friendly
 
 This is important.
 
@@ -1258,18 +1322,20 @@ Hash Map
 
 ---
 
+
+
 # 31. Real-world performance matters
 
 Big-O isn't the whole story.
 
 Hash tables involve:
 
-* Hash computation
-* Memory access
-* Collisions
-* Resizing
-* Poor locality depending on implementation
-* Allocation overhead
+- Hash computation
+- Memory access
+- Collisions
+- Resizing
+- Poor locality depending on implementation
+- Allocation overhead
 
 Arrays can sometimes outperform hash tables even when both appear O(1).
 
@@ -1288,6 +1354,8 @@ Actual machine-level cost
 ```
 
 ---
+
+
 
 # 32. Implement a Hash Table Yourself
 
@@ -1314,6 +1382,8 @@ index = key % capacity
 
 ---
 
+
+
 ## Version 2
 
 Add:
@@ -1325,6 +1395,8 @@ key → value
 Build your own map.
 
 ---
+
+
 
 ## Version 3
 
@@ -1338,19 +1410,23 @@ rehash
 
 ---
 
+
+
 ## Version 4
 
 Implement simple linear probing.
 
 Add:
 
-* Empty slot
-* Occupied slot
-* Deleted/tombstone slot
+- Empty slot
+- Occupied slot
+- Deleted/tombstone slot
 
 Once you've done those, you understand hash tables far beyond merely calling library APIs.
 
 ---
+
+
 
 # 33. Representative Problems
 
@@ -1361,10 +1437,14 @@ You do **not** need 100 hashing questions.
 - [ ] Implement Hash Set
 - [ ] Implement Hash Map
 
+
+
 ## Membership
 
 - [ ] Contains Duplicate
 - [ ] Intersection of Two Arrays
+
+
 
 ## Frequency
 
@@ -1372,23 +1452,33 @@ You do **not** need 100 hashing questions.
 - [ ] First Unique Character
 - [ ] Top K Frequent Elements later with heap
 
+
+
 ## Complement
 
 - [ ] Two Sum
 
+
+
 ## Grouping
 
 - [ ] Group Anagrams
+
+
 
 ## Prefix + Hashing
 
 - [ ] Subarray Sum Equals K
 - [ ] Contiguous Array
 
+
+
 ## Mapping
 
 - [ ] Isomorphic Strings
 - [ ] Word Pattern
+
+
 
 ## Structural/state
 
@@ -1397,6 +1487,9 @@ You do **not** need 100 hashing questions.
 That's plenty for your first deep pass.
 
 ---
+
+
+
 # 34. Pattern Recognition
 
 Train yourself to notice these signals.
@@ -1459,6 +1552,8 @@ That last one is particularly important.
 
 ---
 
+
+
 # 35. For EVERY Hashing Problem
 
 Use this thinking process:
@@ -1507,11 +1602,15 @@ For Two Sum, whether you check before inserting the current element can affect w
 
 ---
 
+
+
 # 36. Compare Multiple Approaches
 
 Example:
 
 ## Contains Duplicate
+
+
 
 ### Brute force
 
@@ -1522,6 +1621,8 @@ Time:  O(n²)
 Space: O(1)
 ```
 
+
+
 ### Sort
 
 ```text
@@ -1531,6 +1632,8 @@ Check neighbors
 Time:  O(n log n)
 Space: depends on sort
 ```
+
+
 
 ### Hash Set
 
@@ -1547,14 +1650,16 @@ Don't just conclude:
 
 Ask:
 
-* Is modifying input allowed?
-* Is memory constrained?
-* Is deterministic worst-case performance important?
-* Is the input already sorted?
+- Is modifying input allowed?
+- Is memory constrained?
+- Is deterministic worst-case performance important?
+- Is the input already sorted?
 
 That's actual algorithmic reasoning.
 
 ---
+
+
 
 # 37. One especially important mental shift
 
@@ -1599,6 +1704,8 @@ That's the deeper idea behind many hash-table problems.
 You're **building an auxiliary memory structure to avoid recomputation/search**.
 
 ---
+
+
 
 # Complete Hash Tables / Hashing Checklist
 

@@ -13,8 +13,6 @@ Hierarchical Modeling   (new capability)
 
 But don't stop at `TreeNode` and `BST`. You should understand **why trees exist**, **how each variant maintains its invariants**, and **which pattern fits which problem**.
 
----
-
 # 1. Start with the problem Trees solve
 
 Suppose you have a company's org chart:
@@ -87,6 +85,8 @@ That's the core promise of trees.
 
 ---
 
+
+
 # 2. Tree Fundamentals — Know These Cold
 
 Before any variant (BST, heap, trie), understand the universal vocabulary.
@@ -118,6 +118,8 @@ TreeNode
 
 ---
 
+
+
 ## Root
 
 The topmost node. Entry point to the entire tree.
@@ -135,6 +137,8 @@ root == nullptr   →   empty tree
 ```
 
 ---
+
+
 
 ## Parent, Child, Sibling
 
@@ -155,6 +159,8 @@ root == nullptr   →   empty tree
 
 ---
 
+
+
 ## Leaf (External Node)
 
 A node with **no children**.
@@ -173,6 +179,8 @@ Leaves are where many recursive base cases live.
 
 ---
 
+
+
 ## Internal Node
 
 Any node that is **not** a leaf.
@@ -182,6 +190,8 @@ Any node that is **not** a leaf.
 ```
 
 ---
+
+
 
 ## Edge
 
@@ -194,6 +204,8 @@ n nodes  →  n - 1 edges   (in a tree)
 This is a fundamental tree identity.
 
 ---
+
+
 
 ## Depth of a Node
 
@@ -215,6 +227,8 @@ Some textbooks count nodes instead of edges. **Be consistent** in interviews —
 
 ---
 
+
+
 ## Height of a Node
 
 Number of edges on the **longest path** from that node down to a leaf.
@@ -233,6 +247,8 @@ height(leaf) = 0
 
 ---
 
+
+
 ## Height of the Tree
 
 Height of the **root**.
@@ -249,6 +265,8 @@ height = 2
 
 ---
 
+
+
 ## Level
 
 Depth + 1 (when root is level 1).
@@ -262,6 +280,8 @@ Level 3:  1, 6, 14
 Level-order traversal processes nodes level by level.
 
 ---
+
+
 
 ## Subtree
 
@@ -289,6 +309,8 @@ Many tree problems are really:
 
 ---
 
+
+
 ## Degree
 
 Number of children a node has.
@@ -303,6 +325,8 @@ In a **binary tree**, degree is 0, 1, or 2.
 ```
 
 ---
+
+
 
 ## Forest
 
@@ -319,6 +343,8 @@ Not one connected structure — multiple roots.
 
 ---
 
+
+
 ## Key Properties of a Tree
 
 ```text
@@ -332,7 +358,11 @@ If any of these break, you don't have a tree — you have a **graph**.
 
 ---
 
+
+
 # 3. Why Trees Exist
+
+
 
 ## Hierarchical Data Is Everywhere
 
@@ -349,6 +379,8 @@ Taxonomies
 Trees are the natural model when data has **parent-child structure**.
 
 ---
+
+
 
 ## Ordered Trees Enable Fast Search
 
@@ -411,33 +443,43 @@ This is why **balance** matters.
 
 ---
 
+
+
 ## Trees vs Arrays
 
-| Need | Array | Tree |
-| ---- | ----- | ---- |
-| Random access by index | O(1) | Not natural |
-| Hierarchical structure | Awkward | Natural |
-| Sorted search | O(log n) if sorted array | O(log n) if balanced BST |
-| Insert/delete sorted | O(n) shifts | O(log n) if balanced |
-| Cache locality | Excellent | Moderate (pointer chasing) |
+
+| Need                   | Array                    | Tree                       |
+| ---------------------- | ------------------------ | -------------------------- |
+| Random access by index | O(1)                     | Not natural                |
+| Hierarchical structure | Awkward                  | Natural                    |
+| Sorted search          | O(log n) if sorted array | O(log n) if balanced BST   |
+| Insert/delete sorted   | O(n) shifts              | O(log n) if balanced       |
+| Cache locality         | Excellent                | Moderate (pointer chasing) |
+
 
 ---
 
+
+
 ## Trees vs Hash Tables
 
-| Need | Hash Table | Balanced BST |
-| ---- | ---------- | ------------ |
-| Exact lookup | Expected O(1) | O(log n) |
-| Sorted order | No | Yes |
-| Range queries (min, max, between) | Awkward | Natural |
-| Predecessor/successor | Awkward | O(log n) |
-| Worst-case guarantee | Can degrade | O(log n) guaranteed |
+
+| Need                              | Hash Table    | Balanced BST        |
+| --------------------------------- | ------------- | ------------------- |
+| Exact lookup                      | Expected O(1) | O(log n)            |
+| Sorted order                      | No            | Yes                 |
+| Range queries (min, max, between) | Awkward       | Natural             |
+| Predecessor/successor             | Awkward       | O(log n)            |
+| Worst-case guarantee              | Can degrade   | O(log n) guaranteed |
+
 
 Ask:
 
 > Do I need ordering, or just fast membership?
 
 ---
+
+
 
 ## Trees vs Linked Lists
 
@@ -452,6 +494,8 @@ Each node has at most one child (in one direction).
 Trees generalize this to **branching structure**.
 
 ---
+
+
 
 # 4. Types of Trees — The Full Landscape
 
@@ -485,6 +529,8 @@ We'll go through each in depth.
 
 ---
 
+
+
 # 5. Binary Tree
 
 The most common interview tree type.
@@ -505,7 +551,11 @@ No ordering requirement.
 
 ---
 
+
+
 ## Shapes Matter
+
+
 
 ### Skewed (degenerate)
 
@@ -549,13 +599,19 @@ Heaps use this shape.
 
 ---
 
+
+
 ## Core Binary Tree Operations
+
+
 
 ### Create / Build
 
 ```text
 Insert nodes with left/right pointers
 ```
+
+
 
 ### Traverse
 
@@ -570,6 +626,8 @@ Time:  O(n)
 Space: O(h) recursive / O(n) iterative with stack
 ```
 
+
+
 ### Height
 
 ```text
@@ -578,6 +636,8 @@ height(node):
     return 1 + max(height(left), height(right))
 ```
 
+
+
 ### Count nodes
 
 ```text
@@ -585,6 +645,8 @@ count(node):
     if node == null: return 0
     return 1 + count(left) + count(right)
 ```
+
+
 
 ### Mirror / Invert
 
@@ -598,7 +660,11 @@ Swap left and right recursively.
 
 ---
 
+
+
 # 6. Binary Search Tree (BST)
+
+
 
 ## The Invariant
 
@@ -622,6 +688,8 @@ Usually **no duplicates**, or duplicates go to one side consistently.
 ```
 
 ---
+
+
 
 ## Why the Invariant Matters
 
@@ -649,6 +717,8 @@ You eliminated half the remaining tree at each step — **if** the tree is balan
 
 ---
 
+
+
 ## BST Search
 
 ```cpp
@@ -665,6 +735,8 @@ Space: O(h) recursive
 ```
 
 ---
+
+
 
 ## BST Insert
 
@@ -699,6 +771,8 @@ Time:  O(h)
 ```
 
 ---
+
+
 
 ## BST Delete
 
@@ -759,6 +833,8 @@ Time:  O(h)
 
 ---
 
+
+
 ## BST Min / Max
 
 ```text
@@ -769,6 +845,8 @@ Time: O(h)
 ```
 
 ---
+
+
 
 ## Inorder Traversal Gives Sorted Order
 
@@ -786,7 +864,10 @@ This is one of the most important BST facts.
 
 ---
 
+
+
 ## BST Complexity
+
 
 | Operation | Average (balanced) | Worst (skewed) |
 | --------- | ------------------ | -------------- |
@@ -796,11 +877,16 @@ This is one of the most important BST facts.
 | Min/Max   | O(log n)           | O(n)           |
 | Inorder   | O(n)               | O(n)           |
 
+
 The worst case is why we need **balanced** BSTs.
 
 ---
 
+
+
 # 7. Balanced BST — AVL Tree
+
+
 
 ## The Problem AVL Solves
 
@@ -824,6 +910,8 @@ height = O(log n)
 
 ---
 
+
+
 ## AVL Invariant
 
 For every node, the **balance factor**:
@@ -838,7 +926,11 @@ If balance becomes `±2`, **rotate** to fix.
 
 ---
 
+
+
 ## Rotations — The Core Mechanism
+
+
 
 ### Right Rotation (LL case)
 
@@ -859,6 +951,8 @@ Before:          After:
     A   B                B   C
 ```
 
+
+
 ### Left Rotation (RR case)
 
 Mirror of right rotation.
@@ -873,6 +967,8 @@ Rotate right on child, then left on node.
 
 ---
 
+
+
 ## AVL Insert Flow
 
 ```text
@@ -885,17 +981,23 @@ Rotate right on child, then left on node.
 
 ---
 
+
+
 ## AVL Complexity
 
-| Operation | Time |
-| --------- | ---- |
+
+| Operation | Time     |
+| --------- | -------- |
 | Search    | O(log n) |
 | Insert    | O(log n) |
 | Delete    | O(log n) |
 
+
 Guaranteed worst-case O(log n) — stricter balance than Red-Black.
 
 ---
+
+
 
 ## AVL Trade-off
 
@@ -914,7 +1016,11 @@ Used when **lookup-heavy** workloads dominate.
 
 ---
 
+
+
 # 8. Balanced BST — Red-Black Tree (Conceptual)
+
+
 
 ## The Idea
 
@@ -942,6 +1048,8 @@ So operations remain O(log n).
 
 ---
 
+
+
 ## Why Red-Black Over AVL?
 
 ```text
@@ -960,6 +1068,8 @@ Linux kernel rbtree
 When **insert/delete-heavy** workloads dominate, Red-Black often wins.
 
 ---
+
+
 
 ## Fixups After Insert/Delete
 
@@ -983,19 +1093,27 @@ Height stays O(log n)
 
 ---
 
+
+
 ## AVL vs Red-Black Summary
 
-| Property | AVL | Red-Black |
-| -------- | --- | --------- |
-| Balance strictness | Stricter | Looser |
-| Lookup | Slightly faster | Slightly slower |
-| Insert/Delete | More rotations | Fewer rotations |
-| Height | ≤ 1.44 log₂(n+2) - 0.328 | ≤ 2 log₂(n+1) |
-| Typical use | Lookup-heavy | General-purpose ordered map |
+
+| Property           | AVL                      | Red-Black                   |
+| ------------------ | ------------------------ | --------------------------- |
+| Balance strictness | Stricter                 | Looser                      |
+| Lookup             | Slightly faster          | Slightly slower             |
+| Insert/Delete      | More rotations           | Fewer rotations             |
+| Height             | ≤ 1.44 log₂(n+2) - 0.328 | ≤ 2 log₂(n+1)               |
+| Typical use        | Lookup-heavy             | General-purpose ordered map |
+
 
 ---
 
+
+
 # 9. Heap (Priority Queue Tree)
+
+
 
 ## Not a BST
 
@@ -1004,6 +1122,8 @@ A heap is a **complete binary tree** with a **heap property**.
 Do not confuse heap ordering with BST ordering.
 
 ---
+
+
 
 ## Min-Heap Property
 
@@ -1023,6 +1143,8 @@ Root = minimum.
 
 ---
 
+
+
 ## Max-Heap Property
 
 ```text
@@ -1032,6 +1154,8 @@ parent.val ≥ child.val
 Root = maximum.
 
 ---
+
+
 
 ## Complete Binary Tree Shape
 
@@ -1049,7 +1173,11 @@ This shape enables **array representation**.
 
 ---
 
+
+
 ## Core Heap Operations
+
+
 
 ### Peek (get min/max)
 
@@ -1058,6 +1186,8 @@ return root
 
 Time: O(1)
 ```
+
+
 
 ### Insert
 
@@ -1079,6 +1209,8 @@ Before:          After bubble up:
 7  4 5  6        7  4 5  6
 ```
 
+
+
 ### Extract Min (or Max)
 
 ```text
@@ -1088,6 +1220,8 @@ Before:          After bubble up:
 
 Time: O(log n)
 ```
+
+
 
 ### Heapify (build heap from array)
 
@@ -1100,6 +1234,8 @@ Time: O(n)   ← not O(n log n)!
 This is a classic interview insight.
 
 ---
+
+
 
 ## Heap Use Cases
 
@@ -1115,21 +1251,29 @@ Task scheduling
 
 ---
 
+
+
 ## Heap Complexity
 
-| Operation | Time |
-| --------- | ---- |
-| Peek      | O(1) |
-| Insert    | O(log n) |
-| Extract   | O(log n) |
-| Heapify   | O(n) |
-| Search arbitrary | O(n) |
+
+| Operation        | Time     |
+| ---------------- | -------- |
+| Peek             | O(1)     |
+| Insert           | O(log n) |
+| Extract          | O(log n) |
+| Heapify          | O(n)     |
+| Search arbitrary | O(n)     |
+
 
 Heaps are **not** for general search. They're for **extremes**.
 
 ---
 
+
+
 # 10. Trie (Prefix Tree)
+
+
 
 ## The Problem Tries Solve
 
@@ -1150,6 +1294,8 @@ Scanning every word is O(total characters).
 A trie makes prefix queries efficient.
 
 ---
+
+
 
 ## Structure
 
@@ -1178,6 +1324,8 @@ Each node represents a **character** (or edge represents a character).
 
 ---
 
+
+
 ## Trie Node
 
 ```cpp
@@ -1189,7 +1337,11 @@ struct TrieNode {
 
 ---
 
+
+
 ## Core Trie Operations
+
+
 
 ### Insert
 
@@ -1200,6 +1352,8 @@ struct TrieNode {
 Time: O(L)   L = word length
 ```
 
+
+
 ### Search (exact)
 
 ```text
@@ -1208,6 +1362,8 @@ Follow characters, check isEnd at last node
 Time: O(L)
 ```
 
+
+
 ### StartsWith (prefix search)
 
 ```text
@@ -1215,6 +1371,8 @@ Follow characters, don't require isEnd
 
 Time: O(L)
 ```
+
+
 
 ### Delete
 
@@ -1226,16 +1384,22 @@ Time: O(L)
 
 ---
 
+
+
 ## Trie vs Hash Table
 
-| Operation | Hash Table | Trie |
-| --------- | ---------- | ---- |
-| Exact search | O(L) average | O(L) |
-| Prefix search | O(n * L) scan | O(L) + DFS for matches |
-| Space | O(total chars) | O(total chars), often more overhead |
-| Ordered prefix iteration | No | Natural |
+
+| Operation                | Hash Table     | Trie                                |
+| ------------------------ | -------------- | ----------------------------------- |
+| Exact search             | O(L) average   | O(L)                                |
+| Prefix search            | O(n * L) scan  | O(L) + DFS for matches              |
+| Space                    | O(total chars) | O(total chars), often more overhead |
+| Ordered prefix iteration | No             | Natural                             |
+
 
 ---
+
+
 
 ## Trie Applications
 
@@ -1249,6 +1413,8 @@ Dictionary problems
 
 ---
 
+
+
 # 11. Tree Traversals — Master All Four
 
 Traversal = visiting every node in a defined order.
@@ -1256,6 +1422,8 @@ Traversal = visiting every node in a defined order.
 This is the single most tested tree skill.
 
 ---
+
+
 
 ## Inorder (Left → Root → Right)
 
@@ -1288,6 +1456,8 @@ void inorder(TreeNode* root) {
 }
 ```
 
+
+
 ### Iterative (stack)
 
 ```text
@@ -1296,6 +1466,8 @@ Pop, visit, go right
 ```
 
 ---
+
+
 
 ## Preorder (Root → Left → Right)
 
@@ -1317,6 +1489,8 @@ Prefix expression evaluation
 Build tree from preorder + inorder
 ```
 
+
+
 ### Recursive
 
 ```cpp
@@ -1329,6 +1503,8 @@ void preorder(TreeNode* root) {
 ```
 
 ---
+
+
 
 ## Postorder (Left → Right → Root)
 
@@ -1351,6 +1527,8 @@ Postfix expression evaluation
 Bottom-up DP on trees
 ```
 
+
+
 ### Recursive
 
 ```cpp
@@ -1363,6 +1541,8 @@ void postorder(TreeNode* root) {
 ```
 
 ---
+
+
 
 ## Level-Order (BFS)
 
@@ -1400,6 +1580,8 @@ void levelOrder(TreeNode* root) {
 }
 ```
 
+
+
 ### Level-order with level separation
 
 ```text
@@ -1413,16 +1595,22 @@ while (!q.empty()) {
 
 ---
 
+
+
 ## Traversal Comparison
 
-| Traversal | Order | Typical Use | Implementation |
-| --------- | ----- | ----------- | -------------- |
-| Inorder   | L-Rt-R | BST sorted output | Stack / recursion |
-| Preorder  | Rt-L-R | Copy, serialize | Stack / recursion |
-| Postorder | L-R-Rt | Delete, bottom-up | Stack / recursion |
-| Level-order | By level | BFS, shortest path in tree | Queue |
+
+| Traversal   | Order    | Typical Use                | Implementation    |
+| ----------- | -------- | -------------------------- | ----------------- |
+| Inorder     | L-Rt-R   | BST sorted output          | Stack / recursion |
+| Preorder    | Rt-L-R   | Copy, serialize            | Stack / recursion |
+| Postorder   | L-R-Rt   | Delete, bottom-up          | Stack / recursion |
+| Level-order | By level | BFS, shortest path in tree | Queue             |
+
 
 ---
+
+
 
 ## Traversal Diagram — Same Tree, All Orders
 
@@ -1445,16 +1633,22 @@ Draw this yourself until it's automatic.
 
 ---
 
+
+
 # 12. Complexity Tables
+
+
 
 ## General Binary Tree
 
-| Operation | Time | Space |
-| --------- | ---- | ----- |
-| Traverse all | O(n) | O(h) stack |
-| Search (unordered) | O(n) | O(h) |
-| Height | O(n) | O(h) |
-| Count nodes | O(n) | O(h) |
+
+| Operation          | Time | Space      |
+| ------------------ | ---- | ---------- |
+| Traverse all       | O(n) | O(h) stack |
+| Search (unordered) | O(n) | O(h)       |
+| Height             | O(n) | O(h)       |
+| Count nodes        | O(n) | O(h)       |
+
 
 ```text
 h = height
@@ -1463,51 +1657,67 @@ n = number of nodes
 
 ---
 
+
+
 ## BST
+
 
 | Operation | Balanced | Skewed |
 | --------- | -------- | ------ |
-| Search | O(log n) | O(n) |
-| Insert | O(log n) | O(n) |
-| Delete | O(log n) | O(n) |
-| Min/Max | O(log n) | O(n) |
-| Inorder | O(n) | O(n) |
+| Search    | O(log n) | O(n)   |
+| Insert    | O(log n) | O(n)   |
+| Delete    | O(log n) | O(n)   |
+| Min/Max   | O(log n) | O(n)   |
+| Inorder   | O(n)     | O(n)   |
+
 
 ---
+
+
 
 ## Balanced BST (AVL / Red-Black)
 
-| Operation | Time |
-| --------- | ---- |
-| Search | O(log n) |
-| Insert | O(log n) |
-| Delete | O(log n) |
-| Successor/Predecessor | O(log n) |
+
+| Operation               | Time         |
+| ----------------------- | ------------ |
+| Search                  | O(log n)     |
+| Insert                  | O(log n)     |
+| Delete                  | O(log n)     |
+| Successor/Predecessor   | O(log n)     |
 | Range query (k results) | O(log n + k) |
 
+
 ---
+
+
 
 ## Heap
 
-| Operation | Time |
-| --------- | ---- |
-| Peek | O(1) |
-| Insert | O(log n) |
-| Extract min/max | O(log n) |
-| Heapify | O(n) |
-| Delete arbitrary | O(n) |
-| Search | O(n) |
+
+| Operation        | Time     |
+| ---------------- | -------- |
+| Peek             | O(1)     |
+| Insert           | O(log n) |
+| Extract min/max  | O(log n) |
+| Heapify          | O(n)     |
+| Delete arbitrary | O(n)     |
+| Search           | O(n)     |
+
 
 ---
 
+
+
 ## Trie
 
-| Operation | Time | Space |
-| --------- | ---- | ----- |
-| Insert word | O(L) | O(L) |
-| Search word | O(L) | O(1) extra |
-| Prefix search | O(L) | O(1) extra |
+
+| Operation             | Time     | Space       |
+| --------------------- | -------- | ----------- |
+| Insert word           | O(L)     | O(L)        |
+| Search word           | O(L)     | O(1) extra  |
+| Prefix search         | O(L)     | O(1) extra  |
 | All words with prefix | O(L + k) | O(k) output |
+
 
 ```text
 L = word length
@@ -1516,14 +1726,18 @@ k = number of matching words
 
 ---
 
+
+
 ## Traversal Space
 
-| Method | Space |
-| ------ | ----- |
-| Recursive DFS | O(h) call stack |
-| Iterative DFS | O(h) explicit stack |
-| BFS level-order | O(w) queue, w = max width |
-| Morris traversal | O(1) — advanced |
+
+| Method           | Space                     |
+| ---------------- | ------------------------- |
+| Recursive DFS    | O(h) call stack           |
+| Iterative DFS    | O(h) explicit stack       |
+| BFS level-order  | O(w) queue, w = max width |
+| Morris traversal | O(1) — advanced           |
+
 
 For a balanced tree:
 
@@ -1539,7 +1753,11 @@ h = O(n)
 
 ---
 
+
+
 # 13. Memory and Representation
+
+
 
 ## Pointer-Based (Most Common)
 
@@ -1572,6 +1790,8 @@ Cons:
 ```
 
 ---
+
+
 
 ## Array-Based (Implicit / Index Formula)
 
@@ -1610,6 +1830,8 @@ Cons:
 
 ---
 
+
+
 ## When to Use Which
 
 ```text
@@ -1620,6 +1842,8 @@ N-ary tree                       → Pointer-based (vector of children)
 ```
 
 ---
+
+
 
 ## Serialization
 
@@ -1647,6 +1871,8 @@ Example BFS serialization:
 
 ---
 
+
+
 # 14. Tree Pattern 1 — DFS (Recursive Divide-and-Conquer)
 
 The foundation of most tree problems.
@@ -1670,6 +1896,8 @@ solve(root):
 
 ---
 
+
+
 ## When to Use
 
 ```text
@@ -1680,6 +1908,8 @@ Path problems from root
 ```
 
 ---
+
+
 
 ## Template
 
@@ -1697,6 +1927,8 @@ ReturnType dfs(TreeNode* root) {
 
 ---
 
+
+
 ## Classic Examples
 
 ```text
@@ -1709,6 +1941,8 @@ Subtree of Another Tree
 ```
 
 ---
+
+
 
 # 15. Tree Pattern 2 — BFS / Level-Order
 
@@ -1724,6 +1958,8 @@ Visit 3, 10 → enqueue children
 
 ---
 
+
+
 ## When to Use
 
 ```text
@@ -1736,6 +1972,8 @@ Minimum depth (first leaf at lowest level)
 ```
 
 ---
+
+
 
 ## Template
 
@@ -1758,6 +1996,8 @@ void bfs(TreeNode* root) {
 
 ---
 
+
+
 ## DFS vs BFS on Trees
 
 ```text
@@ -1768,6 +2008,8 @@ BFS:  O(w) space, level structure, shortest path to any node
 For trees (no cycles), both visit all n nodes in O(n).
 
 ---
+
+
 
 # 16. Tree Pattern 3 — BST Search / Exploit Ordering
 
@@ -1781,6 +2023,8 @@ target == node.val →  found
 
 ---
 
+
+
 ## When to Use
 
 ```text
@@ -1793,6 +2037,8 @@ Lowest Common Ancestor in BST
 ```
 
 ---
+
+
 
 ## Range Queries in BST
 
@@ -1822,6 +2068,8 @@ Time: O(log n + k)   k = results in range
 
 ---
 
+
+
 # 17. Tree Pattern 4 — Inorder Traversal Tricks
 
 Inorder on BST = sorted sequence.
@@ -1834,6 +2082,8 @@ Inorder, count until k
 Time: O(h + k)
 ```
 
+
+
 ## BST Iterator
 
 ```text
@@ -1844,6 +2094,8 @@ Simulate inorder with stack:
 next() in amortized O(1)
 ```
 
+
+
 ## Validate BST
 
 ```text
@@ -1853,6 +2105,8 @@ OR pass (min, max) bounds down recursively
 ```
 
 ---
+
+
 
 # 18. Tree Pattern 5 — Path Problems
 
@@ -1889,6 +2143,8 @@ void dfs(TreeNode* node, int currentSum, vector<int>& path) {
 
 ---
 
+
+
 ## Path Sum Variants
 
 ```text
@@ -1905,6 +2161,8 @@ Prefix sum on paths + hash map
 ```
 
 ---
+
+
 
 # 19. Tree Pattern 6 — Lowest Common Ancestor (LCA)
 
@@ -1928,6 +2186,8 @@ LCA(6, 4) = 5
 
 ---
 
+
+
 ## General Binary Tree LCA
 
 ```cpp
@@ -1947,6 +2207,8 @@ Space: O(h)
 
 ---
 
+
+
 ## BST LCA — Use Ordering
 
 ```text
@@ -1960,6 +2222,8 @@ Time: O(h)
 ```
 
 ---
+
+
 
 # 20. Tree Pattern 7 — Build Tree from Traversals
 
@@ -1985,6 +2249,8 @@ Use hash map for inorder indices → O(n) total.
 
 ---
 
+
+
 ## Postorder + Inorder
 
 ```text
@@ -1994,6 +2260,8 @@ Postorder: last element = root
 Same split logic, build from bottom up.
 
 ---
+
+
 
 # 21. Tree Pattern 8 — Heap / Priority Queue
 
@@ -2007,6 +2275,8 @@ Count frequencies → min-heap of size k
 Time: O(n log k)
 ```
 
+
+
 ## Merge K Sorted Lists
 
 ```text
@@ -2014,6 +2284,8 @@ Min-heap of k list heads
 
 Time: O(N log k)   N = total elements
 ```
+
+
 
 ## Find Median from Data Stream
 
@@ -2027,6 +2299,8 @@ Median: O(1)
 
 ---
 
+
+
 ## Two-Heap Pattern
 
 ```text
@@ -2036,6 +2310,8 @@ Median: O(1)
 ```
 
 ---
+
+
 
 # 22. Tree Pattern 9 — Trie / Prefix Search
 
@@ -2048,12 +2324,16 @@ Build trie from dictionary
 DFS on grid, prune when prefix not in trie
 ```
 
+
+
 ## Replace Words
 
 ```text
 Insert roots into trie
 For each word, find shortest prefix root
 ```
+
+
 
 ## Design Add and Search Words
 
@@ -2062,6 +2342,8 @@ Trie with '.' wildcard → DFS on children at wildcard
 ```
 
 ---
+
+
 
 # 23. Tree Pattern 10 — Morris Traversal / Threaded Tree (Advanced)
 
@@ -2072,6 +2354,8 @@ Uses **threaded links** (temporary right pointers to inorder successor).
 Good to know exists. Less commonly required in interviews.
 
 ---
+
+
 
 # 24. Tree Pattern 11 — Serialize / Deserialize
 
@@ -2086,6 +2370,8 @@ Key insight: traversal order determines reconstruction strategy.
 
 ---
 
+
+
 # 25. Tree Pattern 12 — Subtree / Structure Comparison
 
 ```text
@@ -2097,6 +2383,8 @@ Flip Equivalence: compare with optional swap
 Often combine DFS on main tree + helper to compare.
 
 ---
+
+
 
 # 26. Tree Pattern 13 — Global vs Local State in DFS
 
@@ -2123,6 +2411,8 @@ Bottom-up:   leaves → root (postorder style)
 
 ---
 
+
+
 # 27. Tree Pattern 14 — Binary Tree to Linked List / Flatten
 
 In-place restructuring.
@@ -2147,6 +2437,8 @@ Often solved with recursion or Morris-like threading.
 
 ---
 
+
+
 # 28. Tree Pattern 15 — Monotonic Stack/Deque on Tree (Advanced)
 
 Less common but appears in "next greater node in binary tree" style problems.
@@ -2156,6 +2448,8 @@ DFS order + stack to find next greater element per node
 ```
 
 ---
+
+
 
 # 29. Pattern Recognition
 
@@ -2249,6 +2543,8 @@ Binary Tree Cameras = DFS + Greedy on tree
 
 ---
 
+
+
 # 30. Edge Cases — Extremely Important for Trees
 
 Tree code breaks on edge cases. Always test:
@@ -2336,6 +2632,8 @@ Also consider:
 
 ---
 
+
+
 # 31. Important Implementation Skill: Draw the Tree and Recursion Stack
 
 For trees, **don't do everything mentally initially**.
@@ -2360,6 +2658,8 @@ Mark:
 
 ---
 
+
+
 ## Draw the Recursion Stack
 
 For `maxDepth(8)`:
@@ -2382,6 +2682,8 @@ Return 3
 ```
 
 ---
+
+
 
 ## Draw Pointers During Mutation
 
@@ -2415,6 +2717,8 @@ Before:           After:
 
 ---
 
+
+
 ## Iterative Traversal — Draw the Stack
 
 Inorder on tree above:
@@ -2432,17 +2736,21 @@ This prevents losing track of where you are.
 
 ---
 
+
+
 # 32. Problems to Practice — Grouped by Pattern
 
 You don't need 100 random tree problems. Choose representatives.
 
 ## Fundamentals
 
-- [ ] Maximum Depth of Binary Tree
-- [ ] Same Tree
-- [ ] Invert Binary Tree
-- [ ] Count Complete Tree Nodes
+- [x] Maximum Depth of Binary Tree
+- [x] Same Tree
+- [x] Invert Binary Tree
+- [x] Count Complete Tree Nodes
 - [ ] Symmetric Tree
+
+
 
 ## DFS — Divide and Conquer
 
@@ -2451,6 +2759,8 @@ You don't need 100 random tree problems. Choose representatives.
 - [ ] Subtree of Another Tree
 - [ ] Count Good Nodes in Binary Tree
 
+
+
 ## BFS / Level-Order
 
 - [ ] Binary Tree Level Order Traversal
@@ -2458,6 +2768,8 @@ You don't need 100 random tree problems. Choose representatives.
 - [ ] Average of Levels in Binary Tree
 - [ ] Minimum Depth of Binary Tree
 - [ ] Populating Next Right Pointers in Each Node
+
+
 
 ## BST
 
@@ -2468,6 +2780,8 @@ You don't need 100 random tree problems. Choose representatives.
 - [ ] Kth Smallest Element in a BST
 - [ ] Lowest Common Ancestor of a BST
 
+
+
 ## Path Problems
 
 - [ ] Path Sum
@@ -2476,14 +2790,20 @@ You don't need 100 random tree problems. Choose representatives.
 - [ ] Binary Tree Maximum Path Sum
 - [ ] Sum Root to Leaf Numbers
 
+
+
 ## LCA
 
 - [ ] Lowest Common Ancestor of a Binary Tree
+
+
 
 ## Build Tree
 
 - [ ] Construct Binary Tree from Preorder and Inorder
 - [ ] Construct Binary Tree from Inorder and Postorder
+
+
 
 ## Heap
 
@@ -2492,15 +2812,21 @@ You don't need 100 random tree problems. Choose representatives.
 - [ ] Merge K Sorted Lists
 - [ ] Find Median from Data Stream
 
+
+
 ## Trie
 
 - [ ] Implement Trie
 - [ ] Design Add and Search Words Data Structure
 - [ ] Word Search II
 
+
+
 ## Serialization
 
 - [ ] Serialize and Deserialize Binary Tree
+
+
 
 ## Advanced Composition
 
@@ -2512,6 +2838,9 @@ You don't need 100 random tree problems. Choose representatives.
 That is enough to understand the major tree patterns deeply.
 
 ---
+
+
+
 # 33. For EVERY Tree Problem
 
 Use the same learning process we established for Arrays and Linked Lists.
@@ -2606,11 +2935,15 @@ Always draw the tree and at least one recursion step before coding.
 
 ---
 
+
+
 # 34. Compare Multiple Approaches
 
 Example:
 
 ## Kth Smallest in BST
+
+
 
 ### Inorder with array
 
@@ -2621,6 +2954,8 @@ Time:  O(n)
 Space: O(n)
 ```
 
+
+
 ### Inorder iterative (early stop)
 
 ```text
@@ -2629,6 +2964,8 @@ Stop when count == k
 Time:  O(h + k)
 Space: O(h)
 ```
+
+
 
 ### BST iterator
 
@@ -2640,13 +2977,17 @@ Good for streaming kth queries
 
 Don't just conclude one wins. Ask:
 
-* Is k close to n or small?
-* Multiple queries?
-* Memory constrained?
+- Is k close to n or small?
+- Multiple queries?
+- Memory constrained?
 
 ---
 
+
+
 ## Kth Largest Element
+
+
 
 ### Sort
 
@@ -2655,12 +2996,16 @@ Time:  O(n log n)
 Space: O(1) or O(n)
 ```
 
+
+
 ### Min-heap of size k
 
 ```text
 Time:  O(n log k)
 Space: O(k)
 ```
+
+
 
 ### Quickselect
 
@@ -2672,6 +3017,8 @@ Worst:   O(n²)
 Trees/heaps give O(n log k) with clean code. Quickselect is faster average but trickier.
 
 ---
+
+
 
 # 35. One Especially Important Mental Shift
 
@@ -2704,6 +3051,8 @@ Tree problems are about **information flow** along edges — up or down.
 
 ---
 
+
+
 # 36. Implement Trees Yourself
 
 Don't just use library structures. Build from scratch.
@@ -2716,6 +3065,8 @@ Inorder, preorder, postorder (recursive + iterative)
 Level-order (BFS)
 ```
 
+
+
 ## Version 2 — BST
 
 ```text
@@ -2723,6 +3074,8 @@ Search, insert, delete
 Min, max
 Inorder (sorted output)
 ```
+
+
 
 ## Version 3 — Min-Heap (array-based)
 
@@ -2732,12 +3085,16 @@ Extract min (sift down)
 Heapify
 ```
 
+
+
 ## Version 4 — Trie
 
 ```text
 Insert, search, startsWith
 Delete (optional)
 ```
+
+
 
 ## Version 5 — AVL or Red-Black (stretch goal)
 
@@ -2749,6 +3106,8 @@ Understand balance invariants
 Once you've done those, you understand trees far beyond merely calling `TreeNode` in LeetCode.
 
 ---
+
+
 
 # 37. Real-World Applications
 
@@ -2768,6 +3127,8 @@ Game AI                → minimax trees
 B-trees and B+ trees are the database industry's workhorse — generalization of balanced trees for **disk blocks**. Worth knowing they exist even if you don't implement them yet.
 
 ---
+
+
 
 # Complete Trees Checklist
 

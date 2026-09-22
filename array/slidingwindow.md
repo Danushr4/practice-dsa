@@ -856,6 +856,34 @@ for (int right = 0; right < n; right++) {
 
 For other problems, you might shrink while the condition **is valid**, especially minimum-window problems.
 
+isvlaid template :  
+
+```cpp
+class Solution {
+public:
+    int minSubArrayLen(int target, vector<int>& nums) {
+        int left=0;
+        int sum =0;
+
+        int ans = numeric_limits<int>::max();
+
+        for(int right=0;right<nums.size();right++){
+            sum +=nums[right];
+
+            while(sum>=target){
+                ans = min(ans , right - left + 1 );
+                sum -=nums[left];
+                left++;
+            }
+
+            
+        }
+
+        return ans == numeric_limits<int>::max() ? 0 : ans;
+    }
+};
+```
+
 So again:
 
 > Don't blindly memorize `while (invalid)`.
@@ -1179,6 +1207,78 @@ This is an important advanced Sliding Window idea.
 
 Don't worry if it doesn't feel obvious immediately; learn it after basic fixed/variable windows are comfortable.
 
+### Another way to think about it
+
+Imagine people allowed into a ride based on height:
+
+```
+people <= 180 cm
+```
+
+contains everyone:
+
+```
+150
+```
+
+160
+
+170
+
+180
+
+And:
+
+```
+people <= 179 cm
+```
+
+contains:
+
+```
+150
+```
+
+160
+
+170
+
+Subtract the groups:
+
+```
+(<= 180) - (<= 179)
+```
+
+Who's left?
+
+```
+exactly 180
+```
+
+Same concept:
+
+```
+<= K  -  <= K-1
+```
+
+```
+   =
+
+   == K
+```
+
+So whenever you see:
+
+```
+exactly(K) = atMost(K) - atMost(K - 1);
+```
+
+read it in English as:
+
+> **Count everything up through K, then remove everything below K. What's left is exactly K.**
+
+That's the core idea.
+
 ---
 
 
@@ -1474,11 +1574,11 @@ You don't need 50.
 
 ### Fixed-size
 
-- [ ] **1. Maximum Sum Subarray of Size K** — Learn basic window maintenance.
+- [x] **1. Maximum Sum Subarray of Size K** — Learn basic window maintenance.
 
-- [ ] **2. Maximum Average Subarray I** — Same pattern.
+- [x] **2. Maximum Average Subarray I** — Same pattern.
 
-- [ ] **3. Maximum Number of Vowels in a Substring of Given Length** — Learn maintaining counts instead of sums.
+- [x] **3. Maximum Number of Vowels in a Substring of Given Length** — Learn maintaining counts instead of sums.
 
 ---
 
@@ -1486,9 +1586,9 @@ You don't need 50.
 
 ### Variable-size beginner
 
-- [ ] **4. Minimum Size Subarray Sum** — Learn expand + shrink with positive values.
+- [x] **4. Minimum Size Subarray Sum** — Learn expand + shrink with positive values.
 
-- [ ] **5. Longest Substring Without Repeating Characters** — Learn window + set/frequency.
+- [x] **5. Longest Substring Without Repeating Characters** — Learn window + set/frequency.
 
 ---
 
@@ -1496,11 +1596,11 @@ You don't need 50.
 
 ### Variable-size intermediate
 
-- [ ] **6. Longest Repeating Character Replacement** — Learn a more subtle validity condition.
+- [x] **6. Longest Repeating Character Replacement** — Learn a more subtle validity condition.
 
-- [ ] **7. Fruit Into Baskets** — Essentially: at most 2 distinct values.
+- [x] **7. Fruit Into Baskets** — Essentially: at most 2 distinct values.
 
-- [ ] **8. Max Consecutive Ones III** — Learn: at most K violations.
+- [x] **8. Max Consecutive Ones III** — Learn: at most K violations.
 
 ---
 
@@ -1508,9 +1608,10 @@ You don't need 50.
 
 ### Advanced
 
-- [ ] **9. Minimum Window Substring** — Learn requirements/frequency matching.
+- [x] **9. Minimum Window Substring** — Learn requirements/frequency matching.
 
 - [ ] **10. Subarrays with K Different Integers** — Learn: exactly K = atMost(K) - atMost(K-1).
+- [ ] 11. **[862. Shortest Subarray with Sum at Least K](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/)**
 
 Don't jump to these before the basics.
 

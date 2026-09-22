@@ -42,8 +42,6 @@ That is the deeper pattern.
 
 ---
 
-
-
 # 2. The usual complexity
 
 Most comparison sorting costs:
@@ -1356,15 +1354,15 @@ You don't need dozens.
 
 For this pattern, I'd use:
 
-- [ ] **1. Contains Duplicate — sorting solution**
+- [x] **1. Contains Duplicate — sorting solution**
 
 Compare with hashing.
 
-- [ ] **2. Merge Sorted Array**
+- [x] **2. Merge Sorted Array**
 
 Basic ordered traversal.
 
-- [ ] **3. Merge Intervals**
+- [x] **3. Merge Intervals**
 
 Core Sort + Scan problem.
 
@@ -1372,25 +1370,25 @@ Core Sort + Scan problem.
 
 Overlap detection.
 
-- [ ] **5. Minimum Difference Between Highest and Lowest of K Scores**
+- [x] **5. Minimum Difference Between Highest and Lowest of K Scores**
 
 Sorting exposes nearby candidates.
 
-- [ ] **6. Two Sum II**
+- [x] **6. Two Sum II**
 
 Sorted Two Pointers.
 
-- [ ] **7. 3Sum**
+- [x] **7. 3Sum**
 
 Sort + fixed element + Two Pointers.
 
-- [ ] **8. Group/Remove duplicates from sorted input**
+- [x] **8. Group/Remove duplicates from sorted input**
 
 Adjacent grouping.
 
 Later:
 
-- [ ] **9. Non-overlapping Intervals**
+- [x] **9. Non-overlapping Intervals**
 
 Sort + Greedy.
 
@@ -1399,6 +1397,7 @@ Sort + Greedy.
 Sort + sweep concept.
 
 ---
+
 
 
 # 31. For EVERY Sorting + Scan problem

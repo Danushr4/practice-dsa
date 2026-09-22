@@ -345,62 +345,175 @@ Total becomes O(n), not O(n²).
 
 # 9. 2D Prefix Sum
 
-Now imagine a matrix:
+Think of **2D prefix sum as exactly the 1D prefix sum, but in two directions**.
+
+Matrix:
 
 ```text
-1 2 3
+1  2  3
+4  5  6
+7  8  9
+```
+
+Say we want this rectangle:
+
+```text
+1  2  3
+4 [5  6]
+7 [8  9]
+```
+
+So we want:
+
+```text
+5 + 6 + 8 + 9 = 28
+```
+
+### What does `P[r][c]` mean?
+
+With the half-open definition:
+
+```text
+P[r][c] = sum of rows 0..r-1
+          and cols 0..c-1
+```
+
+So:
+
+```text
+P[3][3]
+```
+
+is the entire matrix:
+
+```text
+[1 2 3]
+[4 5 6]
+[7 8 9]
+
+= 45
+```
+
+But we only want:
+
+```text
+5 6
+8 9
+```
+
+Start with the entire `45`.
+
+First, remove everything **above** our rectangle:
+
+```text
+1 2 3    <- remove
+---------
 4 5 6
 7 8 9
 ```
 
-You want:
-
-> Sum of any rectangular region.
-
-Without preprocessing, each query may scan many cells.
-
-2D prefix sum stores cumulative sums over rectangles.
-
-Define:
+That's:
 
 ```text
-prefix[r][c]
-=
-sum of rectangle from (0,0) to (r-1,c-1)
+P[1][3] = 1 + 2 + 3 = 6
 ```
 
-Then rectangle queries can be answered using inclusion-exclusion.
-
-Conceptually:
+Now:
 
 ```text
-wanted rectangle
-=
-big prefix
-- top strip
-- left strip
-+ overlap
+45 - 6 = 39
 ```
 
-Formula with half-open indexing:
+Then remove everything **left** of our rectangle:
 
 ```text
-sum(r1..r2, c1..c2)
-=
-P[r2+1][c2+1]
-- P[r1][c2+1]
-- P[r2+1][c1]
-+ P[r1][c1]
+1 | 2 3
+4 | 5 6
+7 | 8 9
+^
+remove
 ```
 
-Don't memorize the signs blindly.
+That's:
 
-Understand:
+```text
+P[3][1] = 1 + 4 + 7 = 12
+```
 
-- subtract top
-- subtract left
-- their overlap was subtracted twice
-- add overlap back once
+So:
+
+```text
+45 - 6 - 12
+= 27
+```
+
+But expected answer is `28`.
+
+Why are we off by `1`?
+
+Because cell `1` belonged to **both** things we removed:
+
+```text
+top:
+1 2 3
+
+left:
+1
+4
+7
+```
+
+So `1` got subtracted **twice**:
+
+```text
+45
+- (1+2+3)
+- (1+4+7)
+```
+
+We only needed to remove it once.
+
+Therefore add it back:
+
+```text
+45 - 6 - 12 + 1
+= 28
+```
+
+That's the entire idea:
+
+```text
+answer =
+    BIG
+  - TOP
+  - LEFT
+  + OVERLAP
+```
+
+For coordinates:
+
+```text
+(r1,c1) --------
+   |            |
+   |   WANTED   |
+   |            |
+   -------------- (r2,c2)
+```
+
+the formula is:
+
+```text
+P[r2+1][c2+1]   // BIG
+- P[r1][c2+1]   // TOP
+- P[r2+1][c1]   // LEFT
++ P[r1][c1]     // OVERLAP
+```
+
+So don't memorize `+ - - +`.
+
+Remember:
+
+**Take everything → remove top → remove left → add the double-removed corner back.**
 
 ---
 
@@ -639,7 +752,132 @@ O(number_of_updates × range_length)
 
 ---
 
+ 13 TO 14 :  
+Think of a difference array as storing **where a value starts changing and where that change stops**.
 
+Given:
+
+```text
+a = [0,0,0,0,0,0]
+```
+
+You want:
+
+```text
++5 on [1,4]
+```
+
+Instead of touching indices `1,2,3,4`, record only two events:
+
+```text
+diff[1] += 5   // +5 starts here
+diff[5] -= 5   // +5 stops here
+```
+
+So:
+
+```text
+diff = [0,5,0,0,0,-5]
+```
+
+Now prefix-sum `diff`:
+
+```text
+index 0: 0
+index 1: 0+5     = 5
+index 2: 5+0     = 5
+index 3: 5+0     = 5
+index 4: 5+0     = 5
+index 5: 5+(-5)  = 0
+```
+
+Result:
+
+```text
+[0,5,5,5,5,0]
+```
+
+The key mental model is:
+
+```text
+diff[i] = change applied when entering index i
+```
+
+So for `[L,R] += x`:
+
+```text
+diff[L] += x
+diff[R+1] -= x
+```
+
+Why the `-x`?
+
+Because after `R`, that update should no longer be active.
+
+Example with overlapping updates:
+
+```text
++5 on [1,4]
++3 on [2,3]
+```
+
+Record:
+
+```text
+diff[1] += 5
+diff[5] -= 5
+
+diff[2] += 3
+diff[4] -= 3
+```
+
+Now:
+
+```text
+diff = [0,5,3,0,-3,-5]
+```
+
+Prefix sum gives:
+
+```text
+[0,5,8,8,5,0]
+```
+
+Which matches:
+
+```text
+index 1 => +5
+index 2 => +5 +3 = 8
+index 3 => +5 +3 = 8
+index 4 => +5
+```
+
+So the SDE mental model is:
+
+```text
+Prefix array:
+preprocess once -> fast range queries
+
+Difference array:
+record range boundaries -> fast range updates
+```
+
+And the duality is:
+
+```text
+diff --prefix sum--> actual values
+```
+
+For many offline range updates, this is why:
+
+```text
+q updates: O(q)
+reconstruct array: O(n)
+
+total: O(q+n)
+```
+
+instead of updating every element inside every range.
 
 # 15. Prefix Sum vs Difference Array
 
@@ -659,9 +897,147 @@ The complement is:
 
 > Prefix compresses past values into cumulative information. Difference compresses range changes into boundary events.
 
+
+
+
+
+
+
+Yes. The clean SDE mental model is:
+
+
+| Need                                    | Technique                  |
+| --------------------------------------- | -------------------------- |
+| Many range **queries**                  | Prefix Sum                 |
+| Many range **updates**                  | Difference Array           |
+| Recover final array after range updates | Prefix Sum over Difference |
+| Sum/count in `[L,R]`                    | Prefix Sum                 |
+| Rectangle sum in matrix                 | 2D Prefix Sum              |
+
+
+The easiest way to remember the difference:
+
+### Prefix Sum = “What has accumulated so far?”
+
+```text
+a =      [2, 3, 4, 1]
+prefix = [0, 2, 5, 9, 10]
+```
+
+It stores cumulative **values**.
+
+Then:
+
+```text
+sum(L,R)
+= prefix[R+1] - prefix[L]
+```
+
+So prefix sums are useful when the array is mostly fixed and you're asking lots of questions about ranges.
+
+### Difference Array = “What changes here?”
+
+Suppose:
+
+```text
++5 on [1,4]
+```
+
+Store only the boundaries:
+
+```text
+        L           R+1
+        ↓            ↓
+diff = [0, +5, 0, 0, 0, -5]
+```
+
+Meaning:
+
+```text
+index 1: start applying +5
+index 5: stop applying +5
+```
+
+Then prefix-summing `diff` propagates that change:
+
+```text
+diff:    [0, +5, 0, 0, 0, -5]
+              ↓ prefix sum
+result:  [0,  5, 5, 5, 5,  0]
+```
+
+So difference arrays are useful when you're doing lots of range updates.
+
+### The relationship
+
+They're almost opposites:
+
+```text
+Actual Array
+    |
+    | take differences
+    v
+Difference Array
+    |
+    | prefix sum
+    v
+Actual Array
+```
+
+For example:
+
+```text
+actual = [2, 5, 5, 8]
+```
+
+Its changes are:
+
+```text
+diff = [2, +3, 0, +3]
+```
+
+because:
+
+```text
+start at 2
+2 -> 5 : +3
+5 -> 5 :  0
+5 -> 8 : +3
+```
+
+Prefix sum it:
+
+```text
+2
+2+3     = 5
+2+3+0   = 5
+2+3+0+3 = 8
+```
+
+and you're back to:
+
+```text
+[2,5,5,8]
+```
+
+So the one-liner worth remembering is:
+
+> **Prefix stores accumulated values. Difference stores changes.**
+
+Or in problem-solving terms:
+
+> **Need to read ranges fast → Prefix. Need to modify ranges fast → Difference.**
+
 ---
 
+## **Problems:**
 
+- [Find the middle index in array](https://leetcode.com/problems/find-the-middle-index-in-array/)
+- [Product of array except self](https://leetcode.com/problems/product-of-array-except-self/)
+- [Maximum product subarray](https://leetcode.com/problems/maximum-product-subarray/)
+- [Number of ways to split array](https://leetcode.com/problems/number-of-ways-to-split-array/)
+- [Range Sum Query 2D](https://leetcode.com/problems/range-sum-query-2d-immutable/)
+- [https://seanprashad.com/leetcode-patterns/?pattern=Prefix+Sum](https://seanprashad.com/leetcode-patterns/?pattern=Prefix+Sum)
 
 # Prefix Sum Checklist
 
@@ -696,6 +1072,8 @@ PREFIX SUM
     ├── Boundary changes
     ├── O(1) range update
     └── Prefix to reconstruct result
+
+
 ```
 
 ---
@@ -1480,6 +1858,7 @@ complement
 ```
 
 ---
+
 
 
 # Combined mental model
